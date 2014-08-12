@@ -1,0 +1,180 @@
+/* 
+    Document   : custom
+    Created on : Aug 11, 2014, 3:23:20 PM
+    Author     : Jake
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+html {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+
+    /*background: url(cabin.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: -100;
+}
+
+#bgoverlay {
+    z-index: -99;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    position: fixed;
+}
+
+#content {
+    width: 100%;
+    height: 76%;
+    position: absolute;
+    top: 7%;
+    display: none;
+    background-color:rgba(255,255,255,0.2);
+    
+    -webkit-animation-delay: 1s;
+}
+
+.heading {
+    font-family: 'Sacramento', cursive;
+    margin: 0px;
+    text-align: center;
+    height: 8%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    
+    -webkit-animation: headerFadeIn 1s forwards;
+    -webkit-animation-delay: 1s;
+}
+
+.heading h1 {
+    font-weight: 100;
+    font-size: 50px;
+    pointer-events: none;
+    position: relative;
+    
+    transition: font 1s ease;
+}
+
+@-webkit-keyframes headerFadeIn {
+    0% {font-size: 10px; top:50%; opacity: 0.0}
+    100% {font-size: 50px; top: 15%; opacity: 1}
+}
+
+.buttonGroup {
+    position: absolute;
+    width: 100%;
+    height: 17%;
+    opacity: 0;
+        
+    -webkit-animation: buttonsFadeIn 1s forwards;
+    -webkit-animation-delay: 2s;
+}
+
+.buttonGroup div{
+    height: 100%;
+}
+
+.buttonGroup button {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    height: 50px;
+    width: 200px;
+    margin: -50px -100px;
+    top: 50%;
+    left: 50%;
+    font-size: 16px;
+    
+    
+    color: #fff;
+    border: #fff solid 2px;
+    background: transparent;
+    border-radius: 50px;
+    
+    
+    -webkit-transition: background-color 0.5s, color 0.5s, width 0.5s;
+}
+
+.buttonGroup button:hover {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.buttonGroup button:focus {
+    outline: none;
+}
+
+@-webkit-keyframes buttonsFadeIn {
+    0% {top: 40%; opacity: 0.0}
+    100% {top: 60%; opacity: 1}
+}
+
+.shrinking {
+    width: 50px;
+    white-space: nowrap;
+    -webkit-animation: buttonShrink 1s forwards;
+}
+
+.shrinking:hover {
+    -webkit-animation: buttonGrow 0.5s forwards;
+}
+
+.visible {
+    -webkit-animation: show 1s forwards;
+}
+
+.falling {
+    -webkit-animation: buttonsFall 1s forwards;
+}
+
+.rising{
+    -webkit-animation: headingRise 1s forwards;
+}
+
+.rising h1{
+     font-size: 30px;
+}
+
+@-webkit-keyframes show {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
+@-webkit-keyframes buttonShrink {
+    0% {width: 200px; margin: -50px -100px}
+    50% {color: #fff}
+    100% {width: 50px; margin: -50px -25px; color: #000}
+}
+
+@-webkit-keyframes buttonGrow {
+    0%{width: 50px; margin: -50px -25px;}
+    100%{width: 200px; margin: -50px -100px}
+}
+
+@-webkit-keyframes buttonsFall {
+    0%{top: 60%;opacity: 1}
+    100%{top: 83%;opacity: 1; background-color: rgba(0,0,0,0.8);}
+}
+
+@-webkit-keyframes headingRise {
+    0%{top: 15%; opacity: 1; font-size: 50px}
+    100%{top: -1%; opacity: 1; font-size: 25px; background-color: rgba(0,0,0,0.8);}
+}
+
