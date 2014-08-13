@@ -1,5 +1,5 @@
 <html>
     <body>
-            TODO PICTURES
+        TODO PICTURES
     </body>
 </html>
