@@ -5,15 +5,45 @@ $(document).ready(function() {
 });
 
 function navigate(caller) {
+    $("#pictures").removeClass("growing");
     $("#pictures").addClass("shrinking");
-    $("#pictures").css("background-color", "#fff");
+    $("#news").removeClass("growing");
     $("#news").addClass("shrinking");
-    $("#news").css("background-color", "#fff");
+    $("#calendar").removeClass("growing");
     $("#calendar").addClass("shrinking");
-    $("#calendar").css("background-color", "#fff");
-
-    $(".buttonGroup").addClass("falling");
+    $(".buttonGroup").addClass("falling small");
+    $(".buttonGroup").removeClass("buttonsRise");
     $("#heading").addClass("rising");
+    $("#heading").removeClass("headingFall");
+    $("#heading").css("pointer-events", "auto");
+
+
+    $("#heading").click(function() {
+        /*Heading*/
+        $("#content").fadeOut(100);
+        $("#heading").removeClass("rising");
+        $("#heading").addClass("headingFall");
+        $(".buttonGroup").removeClass("small");
+
+        /*Buttons*/
+        $("#pictures").removeClass("shrinking");
+        $("#news").removeClass("shrinking");
+        $("#calendar").removeClass("shrinking");
+        $(".buttonGroup").removeClass("falling");
+        $(".buttonGroup").addClass("buttonsRise");
+        $("#pictures").addClass("growing");
+        $("#news").addClass("growing");
+        $("#calendar").addClass("growing");
+        $("#pictures").html("Pictures");
+        $("#news").html("News");
+        $("#calendar").html("Calendar");
+
+        setTimeout(function() {
+            $("#pictures").removeClass("growing");
+            $("#news").removeClass("growing");
+            $("#calendar").removeClass("growing");
+        }, 1000);
+    });
 
     setTimeout(function() {
         $("#pictures").html("<i class='fa fa-camera'></i>");
@@ -22,14 +52,18 @@ function navigate(caller) {
     }, 500);
 
     $(".shrinking").hover(function() {
-        $(this).html("<span> " + this.id + "</span>");
+        if ($(".buttonGroup").hasClass("small")) {
+            $(this).html("<span> " + this.id + "</span>");
+        }
     }, function() {
-        if(this.id === 'pictures'){
-            $(this).html("<i class='fa fa-camera'></i>");
-        } else if (this.id === 'news') {
-            $(this).html("<i class='fa fa-rss'></i>");
-        } else if (this.id === 'calendar') {
-            $(this).html("<i class='fa fa-calendar'></i>");
+        if ($(".buttonGroup").hasClass("small")) {
+            if (this.id === 'pictures') {
+                $(this).html("<i class='fa fa-camera'></i>");
+            } else if (this.id === 'news') {
+                $(this).html("<i class='fa fa-rss'></i>");
+            } else if (this.id === 'calendar') {
+                $(this).html("<i class='fa fa-calendar'></i>");
+            }
         }
     });
 

@@ -1,0 +1,111 @@
+/* 
+    Document   : calendar
+    Created on : Aug 12, 2014, 10:13:27 PM
+    Author     : Jake
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.dateModal {
+    position: absolute;
+    height: 74%;
+    width: 50%;
+    top: -100%;
+    left: 25%;
+    background-color: activecaption;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.active {
+    -webkit-animation: slidein 1s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.inactive {
+    pointer-events: none;
+}
+
+.modalClose {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    width: 10%;
+    height: 20%;
+    font-size: 50px;
+    font-weight: 100;
+    
+    -webkit-transition: color 0.5s, opacity 0.5s;
+}
+
+.modalClose:hover {
+    cursor: pointer;
+    color: #000;
+    opacity: 0.5;
+}
+
+@-webkit-keyframes slidein {
+    0% {top: -2000px; opacity: 0.0}
+    50% {top: 11%}
+    100% {top: 13%; opacity: 1.0}  
+}
+
+.modalHeader {
+    width:100%;
+    text-align: center;
+    font-size: 26px;
+    padding: 5% 0px;
+    background-color:  grey;
+    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.calendar {
+    width: 71%;
+    height: 90%;
+    margin-left: 14%;
+    color: #000;
+    background-color: rgba(255,255,255, 0.5);
+    border-radius: 10px;
+}
+
+.weekdays {
+    margin-left: 2.4%;
+}
+
+.weekdays div{
+    width: 13.4%;
+    height: 6%;
+    float: left;
+    margin: 3px;
+    text-align: center;
+}
+
+.weekdays div p{
+    margin: 4px;
+}
+
+.dates {
+    margin-left: 2.4%;
+    height: 100%;
+}
+
+.dates div{
+    width: 13.4%;
+    height: 14.5%;
+    float: left;
+    text-align: center;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.7);
+    position:relative;
+    
+    -webkit-transition: background-color 0.5s, color 0.5s, width 0.5s, height 0.5s;
+}
+
+.dates div:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+

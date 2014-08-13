@@ -62,53 +62,6 @@ body {
     font-weight: 100;
 }
 
-.calendar {
-    width: 71%;
-    height: 90%;
-    margin-left: 14%;
-    color: #000;
-    background-color: rgba(255,255,255, 0.5);
-    border-radius: 10px;
-}
-
-.weekdays {
-    margin-left: 1%;
-}
-
-.weekdays div{
-    width: 13.4%;
-    height: 6%;
-    float: left;
-    margin: 3px;
-    text-align: center;
-}
-
-.weekdays div p{
-    margin: 4px;
-}
-
-.dates {
-    margin-left: 1%;
-    height: 100%;
-}
-
-.dates div{
-    width: 13.4%;
-    height: 14.5%;
-    float: left;
-    text-align: center;
-    margin: 2px;
-    border-radius: 5px;
-    background-color: rgba(255,255,255, 0.7);
-    
-    -webkit-transition: background-color 0.5s, color 0.5s;
-}
-
-.dates div:hover{
-    background-color: #fff;
-    cursor: pointer;
-}
-
 .heading h1 {
     font-weight: 100;
     font-size: 50px;
@@ -150,11 +103,9 @@ body {
     top: 30%;
     left: 50%;
     font-size: 16px;
-    
-    
+    background-color: rgba(0,0,0,0);
     color: #fff;
     border: #fff solid 2px;
-    background: transparent;
     border-radius: 50px;
     
     
@@ -162,9 +113,9 @@ body {
 }
 
 .buttonGroup button:hover {
+    cursor: pointer;
     color: #000;
     background-color: #fff;
-    cursor: pointer;
 }
 
 .buttonGroup button:focus {
@@ -179,11 +130,13 @@ body {
 .shrinking {
     width: 50px;
     white-space: nowrap;
+    background-color: #fff;
     -webkit-animation: buttonShrink 1s forwards;
 }
 
 .shrinking:hover {
     -webkit-animation: buttonGrow 0.5s forwards;
+    background-color: #fff;
 }
 
 .visible {
@@ -196,10 +149,31 @@ body {
 
 .rising{
     -webkit-animation: headingRise 1s forwards;
+    cursor: pointer;
 }
 
 .rising h1{
      font-size: 30px;
+}
+
+.headingFall{
+    -webkit-animation: headingFall 1s forwards;
+    pointer-events: none;
+}
+
+.buttonsRise {
+    -webkit-animation: buttonsRise 1s forwards;
+}
+
+.growing {
+    width: 200px;
+    white-space: nowrap;
+    -webkit-animation: buttonEnlarge 1s forwards;
+}
+
+.grown:hover {
+    background-color: #fff;
+    color: #fff;
 }
 
 @-webkit-keyframes show {
@@ -208,14 +182,20 @@ body {
 }
 
 @-webkit-keyframes buttonShrink {
-    0% {width: 200px; margin: -50px -100px}
+    0% {width: 200px; margin: -50px -100px; background-color: rgba(0,0,0,0)}
     50% {color: #fff}
-    100% {width: 50px; margin: -50px -25px; color: #000}
+    100% {width: 50px; margin: -50px -25px; color: #000; background-color: #fff}
 }
 
-@-webkit-keyframes buttonGrow {
-    0%{width: 50px; margin: -50px -25px;}
-    100%{width: 200px; margin: -50px -100px}
+@-webkit-keyframes buttonGrow{
+    0% {width: 50px; margin: -50px -25px; color: #000}
+    50% {color: #000}
+    100% {width: 200px; margin: -50px -100px}
+}
+
+@-webkit-keyframes buttonEnlarge {
+    0%{width: 50px; margin: -50px -25px; color: #000; background-color: #fff}
+    100%{width: 200px; margin: -50px -100px; color: #fff;background-color: rgba(0,0,0,0)}
 }
 
 @-webkit-keyframes buttonsFall {
@@ -224,9 +204,21 @@ body {
     100%{top: 91%;opacity: 1; background-color: rgba(0,0,0,0.8);}
 }
 
+@-webkit-keyframes buttonsRise {
+    0%{top: 91%;opacity: 1; background-color: rgba(0,0,0,0.8);}
+    25%{background-color: rgba(0,0,0,0);}
+    100%{top: 60%;opacity: 1}
+}
+
 @-webkit-keyframes headingRise {
-    0%{top: 15%; opacity: 1; font-size: 50px}
+    0%{top: 15%; opacity: 1; font-size: 50px; background-color: rgba(0,0,0,0)}
     75%{background-color: rgba(0,0,0,0);}
     100%{top: -1%; opacity: 1; font-size: 25px; background-color: rgba(0,0,0,0.8);}
+}
+
+@-webkit-keyframes headingFall {
+    0% {top: -1%; opacity: 1; font-size: 25px; background-color: rgba(0,0,0,0.8);}
+    25%{background-color: rgba(0,0,0,0);}
+    100% {top: 15%; opacity: 1; font-size: 50px; background-color: rgba(0,0,0,0)}
 }
 
