@@ -1,4 +1,8 @@
 <html>
+    <head>
+        <link href="css/calendar.css" rel="stylesheet" type="text/css">
+        <script src="js/calendar.js"></script>
+    </head>
     <body>
         <header class="label">
             <h2>
@@ -45,31 +49,31 @@
                 $dayNumbers = 1;
                 while ($i < 42) {
                     if ($dayNumbers > 1 && $dayNumbers <= $lastDay) {
-                        echo "<div id='".$dayNumbers."' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                        echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
                         echo $dayNumbers;
                         $dayNumbers += 1;
                     } else {
                         switch ($i) {
                             case 0:
                                 if ($firstDay === 'Sunday') {
-                                    echo "<div id='".$dayNumbers."' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='".$i."' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
                                 }
                                 break;
                             case 5:
                                 if ($firstDay === 'Friday') {
-                                    echo "<div id='".$dayNumbers."' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='".$i."' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
                                 }
                                 break;
                             default:
-                                echo "<div id='".$i."' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
                         }
                     }
                     $i += 1;
@@ -81,7 +85,7 @@
 
         <div class="dateModal">
             <div class="modalHeader">
-                
+
             </div>
             <div class="modalClose" onclick="closeModal();"><i class="fa fa-times"></i></div>
         </div>
