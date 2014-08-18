@@ -78,12 +78,13 @@
     width: 13.4%;
     height: 6%;
     float: left;
-    margin: 3px;
+    margin: 2px;
     text-align: center;
 }
 
 .weekdays div p{
     margin: 4px;
+    color: #fff;
 }
 
 .dates {
