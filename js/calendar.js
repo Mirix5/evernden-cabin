@@ -13,8 +13,9 @@ function expandDate(caller, month, year, reservation) {
     } else {
         $(".modalContent").html("<p>No reservations for this date yet.</p>\
                 <p>If you want to reserve this date, leave your name below:</p>\
-                <input type=\"text\" name=\"name\" value=\"\">\
+                <input id=\"input-box\" type=\"text\" name=\"name\" value=\"\">\
                 <button type=\"submit\">Submit</button>");
+        $("#input-box").focus();
     }
 }
 

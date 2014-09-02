@@ -135,6 +135,10 @@
             <div class="modalContent">
                 <!-- Reservation data gets injected here after being 
                 passed to jquery function by PHP -->
+                <p>No reservations for this date yet.</p>\
+                <p>If you want to reserve this date, leave your name below:</p>\
+                <input id="input-box" type=\"text\" name=\"name\" value=\"\">\
+                <button type=\"submit\">Submit</button>
             </div>
             <div class="modalClose" onclick="closeModal();"><i class="fa fa-times"></i></div>
         </div>
