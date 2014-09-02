@@ -63,8 +63,53 @@
                                     echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
                                 }
                                 break;
+                            case 1:
+                                if ($firstDay === 'Monday') {
+                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo 1;
+                                    $dayNumbers += 1;
+                                } else {
+                                    echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                }
+                                break;
+                            case 2:
+                                if ($firstDay === 'Tuesday') {
+                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo 1;
+                                    $dayNumbers += 1;
+                                } else {
+                                    echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                }
+                                break;
+                            case 3:
+                                if ($firstDay === 'Wednesday') {
+                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo 1;
+                                    $dayNumbers += 1;
+                                } else {
+                                    echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                }
+                                break;
+                            case 4:
+                                if ($firstDay === 'Thursday') {
+                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo 1;
+                                    $dayNumbers += 1;
+                                } else {
+                                    echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                }
+                                break;
                             case 5:
                                 if ($firstDay === 'Friday') {
+                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                    echo 1;
+                                    $dayNumbers += 1;
+                                } else {
+                                    echo "<div id='" . $i . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
+                                }
+                                break;
+                            case 6:
+                                if ($firstDay === 'Saturday') {
                                     echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$month\", \"$year\");'>";
                                     echo 1;
                                     $dayNumbers += 1;
@@ -86,6 +131,10 @@
         <div class="dateModal">
             <div class="modalHeader">
 
+            </div>
+            <div class="modalContent">
+                <!-- Reservation data gets injected here after being 
+                passed to jquery function by PHP -->
             </div>
             <div class="modalClose" onclick="closeModal();"><i class="fa fa-times"></i></div>
         </div>
