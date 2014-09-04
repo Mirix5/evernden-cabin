@@ -16,7 +16,7 @@
         <div id="bgoverlay">
         </div>
         <header id="heading" class="heading">
-            <h1>The Evernden Cabin yo</h1>
+            <h1>The Evernden Cabin</h1>
         </header>
 
         <div class="buttonGroup">

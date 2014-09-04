@@ -4,6 +4,8 @@ $(document).ready(function() {
     });
 });
 
+
+//The most disgusting method ever written
 function navigate(caller) {
     $("#pictures").removeClass("growing");
     $("#pictures").addClass("shrinking");
