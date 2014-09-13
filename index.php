@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include 'databaseDates.php'; ?>
 <html>
     <head>
         <title>The Cabin</title>
@@ -30,7 +31,7 @@
                 <button id="calendar" onclick="navigate(this.id);">Calendar</button>
             </div>
         </div>
-        
+
         <div id="content">
         </div>
 

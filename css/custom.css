@@ -53,7 +53,7 @@ body {
     position: absolute;
     
     -webkit-animation: headerFadeIn 1s forwards;
-    -webkit-animation-delay: 3s;
+    -webkit-animation-delay: 1s;
 }
 
 .label {

@@ -119,18 +119,12 @@
 
 button {
     font-family: 'Lato', sans-serif;
-    position: relative;
-    height: 50px;
     font-size: 16px;
     background-color: #4CBB17;
     color: #fff;
     border: #4CBB17 solid 2px;
     border-radius: 50px;
     position: absolute;
-    left: 70%;
-    width: 20%;
-    top: 50%;
-    
     
     -webkit-transition: background-color 0.5s, color 0.5s, width 0.5s;
 }
@@ -143,6 +137,50 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+.submit {
+    left: 70%;
+    width: 20%;
+    top: 50%;
+    height: 50px;
+}
+
+.cancel {
+    left: 5%;
+    width: 90%;
+    top: 80%;
+    height: 50px;
+}
+
+.left-arrow {
+    height: 30px;
+    width: 30px;
+    left: 30%;
+    color: #000;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.left-arrow:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(0,0,0,0);
+}
+
+.right-arrow{
+    height: 30px;
+    width: 30px;
+    left: calc(70% - 60px);
+    color: #000;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.right-arrow:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(0,0,0,0);
 }
 
 input {
