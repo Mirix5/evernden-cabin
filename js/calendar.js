@@ -37,10 +37,18 @@ function closeModal() {
     $(".dates").toggleClass("inactive");
 }
 
-function incrementMonth(){
-    $('#content').load('calendar.php?sessionMonth=1');
+function incrementMonth() {
+    $('.calendar').animate({
+        opacity: 0
+    });
+    $('#content').load('calendar.php?sessionMonth=1', function() {
+    });
 }
 
-function decrementMonth(){
-    $('#content').load('calendar.php?sessionMonth=-1');
+function decrementMonth() {
+    $('.calendar').animate({
+        opacity: 0
+    });
+    $('#content').load('calendar.php?sessionMonth=-1', function() {
+    });
 }

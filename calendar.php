@@ -7,7 +7,7 @@ include 'databaseDates.php';
         <script src="js/calendar.js"></script>
     </head>
     <body>
-        <header class="label">
+        <header>
             <h2>
                 <?php
                 //Check if var is set
@@ -41,8 +41,8 @@ include 'databaseDates.php';
                 }
                 ?>
 
-                <button class="left-arrow" onclick="decrementMonth();"><i class="fa fa-arrow-circle-o-left"></i></button>
-                <button class="right-arrow" onclick="incrementMonth();"><i class="fa fa-arrow-circle-o-right"></i></button>
+                <button class="left-arrow" onclick="decrementMonth();"><i class="fa fa-arrow-left"></i></button>
+                <button class="right-arrow" onclick="incrementMonth();"><i class="fa fa-arrow-right"></i></button>
             </h2>
         </header>
 
@@ -96,7 +96,7 @@ include 'databaseDates.php';
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='" . $i . "' class='date''>";
+                                    echo "<div id='" . $i . "' class='inactive-date''>";
                                 }
                                 break;
                             case 1:
@@ -105,7 +105,7 @@ include 'databaseDates.php';
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='" . $i . "' class='date''>";
+                                    echo "<div id='" . $i . "' class='inactive-date''>";
                                 }
                                 break;
                             case 2:
@@ -114,7 +114,7 @@ include 'databaseDates.php';
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='" . $i . "' class='date''>";
+                                    echo "<div id='" . $i . "' class='inactive-date''>";
                                 }
                                 break;
                             case 3:
@@ -123,7 +123,7 @@ include 'databaseDates.php';
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='" . $i . "' class='date''>";
+                                    echo "<div id='" . $i . "' class='inactive-date''>";
                                 }
                                 break;
                             case 4:
@@ -132,7 +132,7 @@ include 'databaseDates.php';
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='" . $i . "' class='date''>";
+                                    echo "<div id='" . $i . "' class='inactive-date''>";
                                 }
                                 break;
                             case 5:
@@ -141,7 +141,7 @@ include 'databaseDates.php';
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='" . $i . "' class='date''>";
+                                    echo "<div id='" . $i . "' class='inactive-date''>";
                                 }
                                 break;
                             case 6:
@@ -150,11 +150,11 @@ include 'databaseDates.php';
                                     echo 1;
                                     $dayNumbers += 1;
                                 } else {
-                                    echo "<div id='" . $i . "' class='date''>";
+                                    echo "<div id='" . $i . "' class='inactive-date''>";
                                 }
                                 break;
                             default:
-                                echo "<div id='" . $i . "' class='date''>";
+                                echo "<div id='" . $i . "' class='inactive-date''>";
                         }
                     }
                     $i += 1;
