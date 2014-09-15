@@ -72,7 +72,7 @@ include 'databaseDates.php';
             </div>
             <div class="dates">
                 <?php
-                $result = pg_query($con, "SELECT * FROM ReservedDates WHERE Month=" . $monthNo . " ORDER BY Day");
+                $result = pg_query($con, "SELECT * FROM ReservedDates WHERE Month=" . $monthNo . " AND Year = ". $year." ORDER BY Day");
                 $row = pg_fetch_row($result);
                 $i = 0;
                 $dayNumbers = 1;
