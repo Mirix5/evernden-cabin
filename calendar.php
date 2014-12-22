@@ -70,7 +70,6 @@ include 'databaseDates.php';
                             } else {
                                 echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\");'>";
                                 echo $dayNumbers;
-                                echo $row[1];
                             }
                             $dayNumbers += 1;
                         } else {
