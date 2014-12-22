@@ -9,6 +9,7 @@
 h2 {
     font-family: 'Lato', sans-serif;
     text-align: center;
+    margin: 10px;
 }
 
 .dateModal {
@@ -167,9 +168,9 @@ button:focus {
 }
 
 .left-arrow {
+    display: inline;
     height: 30px;
     width: 30px;
-    left: 40%;
     color: #000;
     border-color: #fff;
     background-color: #fff;
@@ -182,9 +183,9 @@ button:focus {
 }
 
 .right-arrow{
+    display: inline;
     height: 30px;
     width: 30px;
-    left: calc(60% - 60px);
     color: #000;
     border-color: #fff;
     background-color: #fff;

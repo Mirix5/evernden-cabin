@@ -52,3 +52,7 @@ function decrementMonth() {
     $('#content').load('calendar.php?sessionMonth=-1', function() {
     });
 }
+
+function reserve() {
+    alert("reserve called");
+}
