@@ -47,134 +47,136 @@ include 'databaseDates.php';
             </h2>
         </header>
 
-        <div class="calendar">
-            <div class="weekdays">
-                <div><p>Sunday</p></div><div><p>Monday</p></div><div><p>Tuesday</p></div>
-                <div><p>Wednesday</p></div><div><p>Thursday</p></div>
-                <div><p>Friday</p></div><div><p>Saturday</p></div>
-            </div>
-            <div class="dates">
-                <?php
-                $result = pg_query($con, "SELECT * FROM ReservedDates WHERE Month=" . $monthNo . " AND Year = " . $year . " ORDER BY Day");
-                $row = pg_fetch_row($result);
-                $i = 0;
-                $dayNumbers = 1;
-                while ($i < 42) {
-                    if ($dayNumbers > 1 && $dayNumbers <= $lastDay) {
-                        if ($row[1] == $dayNumbers) {
-                            echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
-                            echo $dayNumbers;
-                            echo "<h5>" . $row[3] . "</h5>";
-                            $row = pg_fetch_row($result);
+        <div class="calendar-wrapper">
+            <div class="calendar">
+                <div class="weekdays">
+                    <div><p>Sunday</p></div><div><p>Monday</p></div><div><p>Tuesday</p></div>
+                    <div><p>Wednesday</p></div><div><p>Thursday</p></div>
+                    <div><p>Friday</p></div><div><p>Saturday</p></div>
+                </div>
+                <div class="dates">
+                    <?php
+                    $result = pg_query($con, "SELECT * FROM ReservedDates WHERE Month=" . $monthNo . " AND Year = " . $year . " ORDER BY Day");
+                    $row = pg_fetch_row($result);
+                    $i = 0;
+                    $dayNumbers = 1;
+                    while ($i < 42) {
+                        if ($dayNumbers > 1 && $dayNumbers <= $lastDay) {
+                            if ($row[1] == $dayNumbers) {
+                                echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
+                                echo $dayNumbers;
+                                echo "<h5>" . $row[3] . "</h5>";
+                                $row = pg_fetch_row($result);
+                            } else {
+                                echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\");'>";
+                                echo $dayNumbers;
+                                echo $row[1];
+                            }
+                            $dayNumbers += 1;
                         } else {
-                            echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\");'>";
-                            echo $dayNumbers;
-                            echo $row[1];
+                            switch ($i) {
+                                case 0:
+                                    if ($firstDay === 'Sunday') {
+                                        echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
+                                        echo 1;
+                                        if ($row[1] == $dayNumbers) {
+                                            echo "<h5>" . $row[3] . "</h5>";
+                                            $row = pg_fetch_row($result);
+                                        }
+                                        $dayNumbers += 1;
+                                    } else {
+                                        echo "<div id='" . $i . "' class='inactive-date''>";
+                                    }
+                                    break;
+                                case 1:
+                                    if ($firstDay === 'Monday') {
+                                        echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
+                                        echo 1;
+                                        if ($row[1] == $dayNumbers) {
+                                            echo "<h5>" . $row[3] . "</h5>";
+                                            $row = pg_fetch_row($result);
+                                        }
+                                        $dayNumbers += 1;
+                                    } else {
+                                        echo "<div id='" . $i . "' class='inactive-date''>";
+                                    }
+                                    break;
+                                case 2:
+                                    if ($firstDay === 'Tuesday') {
+                                        echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
+                                        echo 1;
+                                        if ($row[1] == $dayNumbers) {
+                                            echo "<h5>" . $row[3] . "</h5>";
+                                            $row = pg_fetch_row($result);
+                                        }
+                                        $dayNumbers += 1;
+                                    } else {
+                                        echo "<div id='" . $i . "' class='inactive-date''>";
+                                    }
+                                    break;
+                                case 3:
+                                    if ($firstDay === 'Wednesday') {
+                                        echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
+                                        echo 1;
+                                        if ($row[1] == $dayNumbers) {
+                                            echo "<h5>" . $row[3] . "</h5>";
+                                            $row = pg_fetch_row($result);
+                                        }
+                                        $dayNumbers += 1;
+                                    } else {
+                                        echo "<div id='" . $i . "' class='inactive-date''>";
+                                    }
+                                    break;
+                                case 4:
+                                    if ($firstDay === 'Thursday') {
+                                        echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
+                                        echo 1;
+                                        if ($row[1] == $dayNumbers) {
+                                            echo "<h5>" . $row[3] . "</h5>";
+                                            $row = pg_fetch_row($result);
+                                        }
+                                        $dayNumbers += 1;
+                                    } else {
+                                        echo "<div id='" . $i . "' class='inactive-date''>";
+                                    }
+                                    break;
+                                case 5:
+                                    if ($firstDay === 'Friday') {
+                                        echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
+                                        echo 1;
+                                        if ($row[1] == $dayNumbers) {
+                                            echo "<h5>" . $row[3] . "</h5>";
+                                            $row = pg_fetch_row($result);
+                                        }
+                                        $dayNumbers += 1;
+                                    } else {
+                                        echo "<div id='" . $i . "' class='inactive-date''>";
+                                    }
+                                    break;
+                                case 6:
+                                    if ($firstDay === 'Saturday') {
+                                        echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
+                                        echo 1;
+                                        if ($row[1] == $dayNumbers) {
+                                            echo "<h5>" . $row[3] . "</h5>";
+                                            $row = pg_fetch_row($result);
+                                        }
+                                        $dayNumbers += 1;
+                                    } else {
+                                        echo "<div id='" . $i . "' class='inactive-date''>";
+                                    }
+                                    break;
+                                default:
+                                    echo "<div id='" . $i . "' class='inactive-date''>";
+                            }
                         }
-                        $dayNumbers += 1;
-                    } else {
-                        switch ($i) {
-                            case 0:
-                                if ($firstDay === 'Sunday') {
-                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
-                                    echo 1;
-                                    if ($row[1] == $dayNumbers) {
-                                        echo "<h5>" . $row[3] . "</h5>";
-                                        $row = pg_fetch_row($result);
-                                    }
-                                    $dayNumbers += 1;
-                                } else {
-                                    echo "<div id='" . $i . "' class='inactive-date''>";
-                                }
-                                break;
-                            case 1:
-                                if ($firstDay === 'Monday') {
-                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
-                                    echo 1;
-                                    if ($row[1] == $dayNumbers) {
-                                        echo "<h5>" . $row[3] . "</h5>";
-                                        $row = pg_fetch_row($result);
-                                    }
-                                    $dayNumbers += 1;
-                                } else {
-                                    echo "<div id='" . $i . "' class='inactive-date''>";
-                                }
-                                break;
-                            case 2:
-                                if ($firstDay === 'Tuesday') {
-                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
-                                    echo 1;
-                                    if ($row[1] == $dayNumbers) {
-                                        echo "<h5>" . $row[3] . "</h5>";
-                                        $row = pg_fetch_row($result);
-                                    }
-                                    $dayNumbers += 1;
-                                } else {
-                                    echo "<div id='" . $i . "' class='inactive-date''>";
-                                }
-                                break;
-                            case 3:
-                                if ($firstDay === 'Wednesday') {
-                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
-                                    echo 1;
-                                    if ($row[1] == $dayNumbers) {
-                                        echo "<h5>" . $row[3] . "</h5>";
-                                        $row = pg_fetch_row($result);
-                                    }
-                                    $dayNumbers += 1;
-                                } else {
-                                    echo "<div id='" . $i . "' class='inactive-date''>";
-                                }
-                                break;
-                            case 4:
-                                if ($firstDay === 'Thursday') {
-                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
-                                    echo 1;
-                                    if ($row[1] == $dayNumbers) {
-                                        echo "<h5>" . $row[3] . "</h5>";
-                                        $row = pg_fetch_row($result);
-                                    }
-                                    $dayNumbers += 1;
-                                } else {
-                                    echo "<div id='" . $i . "' class='inactive-date''>";
-                                }
-                                break;
-                            case 5:
-                                if ($firstDay === 'Friday') {
-                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
-                                    echo 1;
-                                    if ($row[1] == $dayNumbers) {
-                                        echo "<h5>" . $row[3] . "</h5>";
-                                        $row = pg_fetch_row($result);
-                                    }
-                                    $dayNumbers += 1;
-                                } else {
-                                    echo "<div id='" . $i . "' class='inactive-date''>";
-                                }
-                                break;
-                            case 6:
-                                if ($firstDay === 'Saturday') {
-                                    echo "<div id='" . $dayNumbers . "' class='date' onclick='expandDate(this.id, \"$monthNo\", \"$month\", \"$year\", \"$row[3]\");'>";
-                                    echo 1;
-                                    if ($row[1] == $dayNumbers) {
-                                        echo "<h5>" . $row[3] . "</h5>";
-                                        $row = pg_fetch_row($result);
-                                    }
-                                    $dayNumbers += 1;
-                                } else {
-                                    echo "<div id='" . $i . "' class='inactive-date''>";
-                                }
-                                break;
-                            default:
-                                echo "<div id='" . $i . "' class='inactive-date''>";
-                        }
+                        $i += 1;
+                        echo "</div>";
                     }
-                    $i += 1;
-                    echo "</div>";
-                }
-                ?>
+                    ?>
+                </div>
             </div>
-        </div> 
+        </div>
 
         <div class="dateModal">
             <div class="modalHeader">
