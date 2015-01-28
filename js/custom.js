@@ -9,8 +9,8 @@ $(document).ready(function() {
 function navigate(caller) {
     $("#pictures").removeClass("growing");
     $("#pictures").addClass("shrinking");
-    $("#news").removeClass("growing");
-    $("#news").addClass("shrinking");
+    $("#info").removeClass("growing");
+    $("#info").addClass("shrinking");
     $("#calendar").removeClass("growing");
     $("#calendar").addClass("shrinking");
     $(".buttonGroup").addClass("falling small");
@@ -29,27 +29,27 @@ function navigate(caller) {
 
         /*Buttons*/
         $("#pictures").removeClass("shrinking");
-        $("#news").removeClass("shrinking");
+        $("#info").removeClass("shrinking");
         $("#calendar").removeClass("shrinking");
         $(".buttonGroup").removeClass("falling");
         $(".buttonGroup").addClass("buttonsRise");
         $("#pictures").addClass("growing");
-        $("#news").addClass("growing");
+        $("#info").addClass("growing");
         $("#calendar").addClass("growing");
         $("#pictures").html("Pictures");
-        $("#news").html("News");
+        $("#info").html("Info");
         $("#calendar").html("Calendar");
 
         setTimeout(function() {
             $("#pictures").removeClass("growing");
-            $("#news").removeClass("growing");
+            $("#info").removeClass("growing");
             $("#calendar").removeClass("growing");
         }, 1000);
     });
 
     setTimeout(function() {
         $("#pictures").html("<i class='fa fa-camera'></i>");
-        $("#news").html("<i class='fa fa-rss'></i>");
+        $("#info").html("<i class='fa fa-rss'></i>");
         $("#calendar").html("<i class='fa fa-calendar'></i>");
     }, 500);
 
@@ -61,7 +61,7 @@ function navigate(caller) {
         if ($(".buttonGroup").hasClass("small")) {
             if (this.id === 'pictures') {
                 $(this).html("<i class='fa fa-camera'></i>");
-            } else if (this.id === 'news') {
+            } else if (this.id === 'info') {
                 $(this).html("<i class='fa fa-rss'></i>");
             } else if (this.id === 'calendar') {
                 $(this).html("<i class='fa fa-calendar'></i>");
@@ -81,7 +81,7 @@ function navigate(caller) {
             $("#content").load("calendar.php");
             $("#content").fadeIn(500);
         }, 1000);
-    } else if (caller === 'news') {
+    } else if (caller === 'info') {
         $("#content").fadeOut(500);
         setTimeout(function() {
             $("#content").load("news.php");

@@ -1,5 +1,5 @@
 <html>
     <body>
-        TODO NEWS
+        TODO Info
     </body>
 </html>

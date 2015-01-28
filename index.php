@@ -13,7 +13,7 @@
     </head>
 
     <body>
-        <img src="images/cabin.jpg" id="background"/>
+        <img id="background" src="images/cabin.jpg" />
         <div id="bgoverlay">
         </div>
         <header id="heading" class="heading">
@@ -25,7 +25,7 @@
                 <button id="pictures" onclick="navigate(this.id);">Pictures</button>
             </div>
             <div style="width: 33%; float: left">
-                <button id="news" onclick="navigate(this.id);">News</button>
+                <button id="info" onclick="navigate(this.id);">Info</button>
             </div>
             <div style="width: 33%; float: left">
                 <button id="calendar" onclick="navigate(this.id);">Calendar</button>
