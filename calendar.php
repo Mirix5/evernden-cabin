@@ -15,6 +15,8 @@ include 'databaseDates.php';
                 //Check if var is set
                 if (isset($_GET['sessionMonth'])) {
                     $_SESSION['sessionMonth'] = $_SESSION['sessionMonth'] + $_GET['sessionMonth'];
+                } else {
+                    $_SESSION['sessionMonth'] = 0;
                 }
 
                 //Display new session var
