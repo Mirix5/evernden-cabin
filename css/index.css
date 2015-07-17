@@ -1,0 +1,50 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+	color: white;
+	overflow: none;
+}
+
+/*Background */
+
+.background-image {
+	position: absolute;
+	z-index: -100;
+	opacity: 0.6;
+	width: 100vw;
+	height: auto;
+}
+
+/* Content wraps everything and resizes based on media width */
+
+.content {
+	height: 100vh;
+}
+
+.heading {
+	position: absolute;
+	text-align: center;
+	font-size: 1.5vw;
+	font-family: 'Sacramento', sans-serif;
+	width: 100vw;
+	top: -20%;
+	opacity: 0;
+
+	-webkit-transition: top 0.8s, opacity 1s;
+}
+
+.heading h1 {
+	display: inline-block;
+}
+
+.heading h1:hover {
+	cursor: pointer;
+}
+
+.heading-landing-pos {
+	top: 33%;
+	opacity: 1;
+}
