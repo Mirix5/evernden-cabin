@@ -6,6 +6,7 @@ body {
 	background-color: black;
 	color: white;
 	overflow: none;
+	font-family: 'Lato', sans-serif;
 }
 
 /*Background */
@@ -24,6 +25,8 @@ body {
 	height: 100vh;
 }
 
+
+/* Heading - The Evernden Cabin */
 .heading {
 	position: absolute;
 	text-align: center;
@@ -38,6 +41,7 @@ body {
 
 .heading h1 {
 	display: inline-block;
+	font-weight: 100;
 }
 
 .heading h1:hover {
@@ -47,4 +51,23 @@ body {
 .heading-landing-pos {
 	top: 33%;
 	opacity: 1;
+}
+
+
+/* Custom navigation buttons*/
+.button-bar{
+	position: absolute;
+	text-align: center;
+	width: 100vw;
+	top: 45%;
+	font-size: 1vw;
+}
+
+.custom-button {
+	display: inline-block;
+	margin: 0 2vw;
+}
+
+.custom-button:hover{
+	cursor: pointer;
 }
