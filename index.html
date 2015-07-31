@@ -23,20 +23,21 @@
             <div class="underline"></div>
 
             <div class="button-bar">
-                <div class="custom-button news" onclick="navClick()">
+                <div class="custom-button news" onclick="navClick()" ng-click="nav = 1">
                     <p>news</p>
                 </div>
-                <div class="custom-button photos">
+                <div class="custom-button photos" onclick="navClick()" ng-click="nav = 2">
                     <p>photos</p>
                 </div>
-                <div class="custom-button calendar">
+                <div class="custom-button calendar" onclick="navClick()" ng-click="nav = 3">
                     <p>calendar</p>
                 </div>
             </div>
         </div>
 
         <div class="nav-content">
-            <calendar></calendar>
+            <news ng-show="nav == 1"></news>
+            <calendar ng-show="nav == 3"></calendar>
         </div>
     </div>
 

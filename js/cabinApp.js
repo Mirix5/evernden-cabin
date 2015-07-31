@@ -7,6 +7,13 @@ myApp.directive('calendar', function(){
 	};
 });
 
+myApp.directive('news', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'news.html'
+	};
+});
+
 
 function navClick() {
 	$(".heading").removeClass("heading-landing-pos");
