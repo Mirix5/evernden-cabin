@@ -28,20 +28,21 @@ body {
 
 /* Heading - The Evernden Cabin */
 .heading {
-	position: absolute;
+	position: relative;
 	text-align: center;
 	font-size: 1.5vw;
 	font-family: 'Sacramento', sans-serif;
-	width: 100vw;
-	top: -20%;
+	width: 100%;
+	-webkit-transform: translateY(-50vh);
 	opacity: 0;
 
-	-webkit-transition: top 0.8s, opacity 1s;
+	-webkit-transition: -webkit-transform 0.8s, opacity 1s;
 }
 
 .heading h1 {
-	display: inline-block;
+	margin: 0;
 	font-weight: 100;
+	margin: 0;
 }
 
 .heading h1:hover {
@@ -49,25 +50,62 @@ body {
 }
 
 .heading-landing-pos {
-	top: 33%;
+	-webkit-transform: translateY(37vh);
+	opacity: 1;
+}
+
+.heading-nav-pos {
+	-webkit-transform: translateY(1vh);
 	opacity: 1;
 }
 
 
 /* Custom navigation buttons*/
 .button-bar{
-	position: absolute;
+	position: relative;
 	text-align: center;
 	width: 100vw;
-	top: 45%;
-	font-size: 1vw;
+	font-size: 1.7vw;
 }
 
 .custom-button {
 	display: inline-block;
 	margin: 0 2vw;
+	-webkit-transition: -webkit-transform 0.25s;
+}
+
+.custom-button p {
+	margin-top: 0;
 }
 
 .custom-button:hover{
 	cursor: pointer;
+	color: #7BACCB;
+	-webkit-transform: translateY(-5px);
+}
+
+.underline {
+	width: 0;
+	height: 2px;
+	background-color: white;
+}
+
+.underline-hover {
+	width: 100%;
+	-webkit-transition: width 0.2s;
+}
+
+/* Loadable content div*/
+
+.nav-content {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(23, 89, 71, 0.8); /* #175947 */
+	-webkit-transition: -webkit-transform 0.7s;
+	-webkit-transform: translateY(100vh);
+}
+
+.nav-content-expand {
+	-webkit-transform: translateY(0px);
 }

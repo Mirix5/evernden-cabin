@@ -1,38 +1,44 @@
-<html>
+<html ng-app="myApp">
 <head>
     <title>The Cabin</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
 
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-    <script src="js/index.js" async></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="js/libs/angular.js"></script>
+    <script src="js/cabinApp.js"></script>
 
 </head>
 
 <body>
 
-<img class="background-image" src="images/cabin.jpg">
+    <img class="background-image" src="images/cabin.jpg">
 
-<div class="content">
-    <div class="heading">
-        <h1 class="the-evernden-cabin">The Evernden Cabin</h1>
-    </div>
+    <div class="content">
+        <div class="heading heading-landing-pos">
+            <h1 class="the-evernden-cabin" onclick="headingClick()">The Evernden Cabin</h1>
+            <div class="underline"></div>
 
-    <div class="button-bar">
-        <div class="custom-button news">
-            <p>news</p>
+            <div class="button-bar">
+                <div class="custom-button news" onclick="navClick()">
+                    <p>news</p>
+                </div>
+                <div class="custom-button photos">
+                    <p>photos</p>
+                </div>
+                <div class="custom-button calendar">
+                    <p>calendar</p>
+                </div>
+            </div>
         </div>
-        <div class="custom-button photos">
-            <p>photos</p>
-        </div>
-        <div class="custom-button calendar">
-            <p>calendar</p>
+
+        <div class="nav-content">
+            <calendar></calendar>
         </div>
     </div>
-</div>
 
 </body>
 </html>
