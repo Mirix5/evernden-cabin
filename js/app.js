@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('cabinApp', []);
 
 myApp.directive('calendar', function(){
 	return {
@@ -11,6 +11,13 @@ myApp.directive('news', function(){
 	return {
 		restrict: 'E',
 		templateUrl: 'news.html'
+	};
+});
+
+myApp.directive('photos', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'photos.html'
 	};
 });
 
