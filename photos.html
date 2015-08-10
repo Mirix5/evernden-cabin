@@ -1,1 +1,13 @@
-TODO PHOTOS
+<link href="css/photos.css" rel="stylesheet" type="text/css">
+
+<div class="album">
+	<div class="thumbs">
+		<div class="thumb" onclick="modalOpen()" ng-repeat="photo in album.photos" ng-click="album.current = album.photos.indexOf(photo)">
+			<img ng-src="{{photo}}"></img>
+		</div>
+	</div>
+</div>
+
+<div class="modal">
+	<img ng-src="{{album.photos[album.current]}}" onclick="modalOpen()"></img>
+</div>

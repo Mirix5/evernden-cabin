@@ -98,10 +98,10 @@ body {
 /* Loadable content div*/
 
 .nav-content {
-	position: relative;
-	display: inline-block;
 	height: 100vh;
 	width: 100vw;
+	margin-left: auto;
+    margin-right: auto;
 	background-color: rgba(23, 89, 71, 0.8); /* #175947 */
 	-webkit-transition: -webkit-transform 0.7s;
 	-webkit-transform: translateY(100vh);
