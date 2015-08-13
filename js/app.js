@@ -1,33 +1,13 @@
-var app = angular.module('cabinApp', []);
+(function() {
+	var app = angular.module('cabinApp', ['app-photos', 'app-calendar']);
 
-app.directive('calendar', function(){
-	return {
-		restrict: 'E',
-		templateUrl: 'calendar.html'
-	};
-});
-
-app.directive('news', function(){
-	return {
-		restrict: 'E',
-		templateUrl: 'news.html'
-	};
-});
-
-app.directive('photos', function(){
-	return {
-		restrict: 'E',
-		templateUrl: 'photos.html',
-		controller: function(){
-			this.photos =  ['images/Uploaded_Photos/Northspur_Sign.jpg', 'images/Uploaded_Photos/tracks.jpg', 'images/Uploaded_Photos/Tree.jpg',
-							'images/Uploaded_Photos/Kings Hole 1.jpg', 'images/Uploaded_Photos/Kings Hole 2.jpg', 'images/Uploaded_Photos/Kings Hole 3.jpg',
-							'images/Uploaded_Photos/Kings Hole 4.jpg', 'images/Uploaded_Photos/Kings Hole Sign.jpg', 'images/Uploaded_Photos/River.jpg',
-							'images/tree.jpg'];
-			this.current = 0;
-		},
-		controllerAs: 'album'
-	};
-});
+	app.directive('news', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'news.html'
+		};
+	});
+})();
 
 
 function navClick() {

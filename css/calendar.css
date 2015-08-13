@@ -1,3 +1,81 @@
 .calendar {
     text-align: center;
+    font-weight: 300;
+    width: 100vw;
+    font-size: 0;
+}
+
+.date-heading {
+	position: relative;
+	display: inline-block;
+	width: calc(70vw - 4px);
+	font-size: 1vw;
+	color: rgba(23, 89, 71, 1);
+	background-color: white;
+	border-left: 1px solid rgba(23, 89, 71, 1);
+	border-right: 1px solid rgba(23, 89, 71, 1);
+}
+
+.date-heading h1, .date-decrement h1, .date-increment h1 {
+	font-weight: 300;
+}
+
+.date-decrement {
+	position: relative;
+	display: inline-block;
+	width: 15vw;
+	z-index: 100;
+	font-size: 1vw;
+}
+
+.date-increment{
+	position: relative;
+	display: inline-block;
+	width: 15vw;
+	font-size: 1vw;
+}
+
+.date-decrement:hover, .date-increment:hover {
+	cursor: pointer;
+	background-color: rgba(255,255,255, 0.2);
+}
+
+.day-names {
+	margin: 0 calc(15vw + 1px);
+}
+
+.day-names ul {
+	padding: 0;
+	color: rgba(23, 89, 71, 1);
+	background-color: white;
+	border-bottom: 1px solid rgba(23, 89, 71, 1);
+	border-right: 1px solid rgba(23, 89, 71, 1);
+	border-left: 1px solid rgba(23, 89, 71, 1);
+}
+
+.day-names li {
+	display: inline-block;
+	font-size: 1.3vw;
+	list-style-type: none;
+	width: 14.28%;
+}
+
+.days {
+	width: 70vw;
+	margin: 0 15vw;
+	font-size: 0;
+}
+
+.week {
+}
+
+.day {
+	display: inline-block;
+	float: left;
+	height: calc(14.28% - 2px);
+	width: calc(14.28% - 2px);
+	font-size: 1.2vw;
+	color: rgba(23, 89, 71, 1);
+	background-color: white;
+	border: 1px solid rgba(23, 89, 71, 1);
 }

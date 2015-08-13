@@ -1,5 +1,26 @@
 <link href="css/calendar.css" rel="stylesheet" type="text/css">
 
 <div class="calendar">
-	TODO CALENDAR
+	<div class="date-decrement"><h1> < </h1></div>
+	<div class="date-heading">
+		<h1>{{calendar.month + ' ' + calendar.year}}</h1>
+	</div>
+	<div class="date-increment"><h1> > </h1></div>
+	<div class="day-names">
+		<ul>
+			<li>Sunday</li>
+			<li>Monday</li>
+			<li>Tuesday</li>
+			<li>Wednesday</li>
+			<li>Thursday</li>
+			<li>Friday</li>
+			<li>Saturday</li>
+		</ul>
+	</div>
+
+	<div class="days">
+			<div class="day" ng-repeat="day in calendar.days">
+				<p ng-show="day.day_text != 0">{{day.day_text}}</p>
+			</div>
+	</div>
 </div>

@@ -6,7 +6,8 @@ body {
 	background-color: black;
 	color: white;
 	overflow: none;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
 }
 
 /*Background */
@@ -16,7 +17,7 @@ body {
 	z-index: -100;
 	opacity: 0.6;
 	width: 100vw;
-	height: auto;
+	height: 100vh;
 }
 
 /* Content wraps everything and resizes based on media width */
@@ -102,7 +103,7 @@ body {
 	width: 100vw;
 	margin-left: auto;
     margin-right: auto;
-	background-color: rgba(23, 89, 71, 0.8); /* #175947 */
+	background-color: rgba(23, 89, 71, 1); /* #175947 */
 	-webkit-transition: -webkit-transform 0.7s;
 	-webkit-transform: translateY(100vh);
 }

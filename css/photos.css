@@ -2,22 +2,20 @@ photos {
 }
 
 .album {
-	width: 100%;
+	text-align: center;
 }
 
 .album .thumbs {
-	position: relative;
-	display: inline-block;
-	width: 100%;
+	display: inline;
 }
 
 .album .thumb {
-	position: relative;
+	background-color: rgba(0,0,0,0.3);
+	height: 20vh;
+	width: 40vh;
 	display: inline-block;
-	background-color: rgba(0,0,0,0.5);
-	max-height: 30vh;
-	max-width: 30vh;
-	float:left;
+	margin: 1%;
+	border:1px solid white;
 }
 
 .thumb:hover {
@@ -25,10 +23,12 @@ photos {
 }
 
 .album .thumb img{
-	max-width: 98%;
-	max-height: 98%;
+	max-height: 20vh;
+	max-width: 40vh;
 	display: block;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
 }
 
 

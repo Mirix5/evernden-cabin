@@ -3,13 +3,15 @@
     <title>The Cabin</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
     <link href="css/index.css" rel="stylesheet" type="text/css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="js/libs/angular.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/photos.js"></script>
+    <script src="js/calendar.js"></script>
 
 </head>
 
@@ -23,22 +25,22 @@
             <div class="underline"></div>
 
             <div class="button-bar">
-                <div class="custom-button news" onclick="navClick()" ng-click="nav = 1">
+                <div class="custom-button" onclick="navClick()" ng-click="nav = 1">
                     <p>news</p>
                 </div>
-                <div class="custom-button photos" onclick="navClick()" ng-click="nav = 2">
+                <div class="custom-button" onclick="navClick()" ng-click="nav = 2">
                     <p>photos</p>
                 </div>
-                <div class="custom-button calendar" onclick="navClick()" ng-click="nav = 3">
+                <div class="custom-button" onclick="navClick()" ng-click="nav = 3">
                     <p>calendar</p>
                 </div>
             </div>
         </div>
 
         <div class="nav-content">
-            <news ng-show="nav == 1"></news>
-            <photos ng-show="nav == 2"></photos>
-            <calendar ng-show="nav == 3"></calendar>
+            <div ng-show="nav == 1"><news ng-show="nav == 1"></news></div>
+            <div ng-show="nav == 2"><photos></photos></div>
+            <div ng-show="nav == 3"><calendar></calendar></div>
         </div>
     </div>
 
