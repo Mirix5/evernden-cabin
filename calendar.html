@@ -3,7 +3,7 @@
 <div class="calendar">
 	<div class="date-decrement"><h1> < </h1></div>
 	<div class="date-heading">
-		<h1>{{calendar.month + ' ' + calendar.year}}</h1>
+		<h1>{{calendar.month_string + ' ' + calendar.year}}</h1>
 	</div>
 	<div class="date-increment"><h1> > </h1></div>
 	<div class="day-names">
@@ -19,8 +19,9 @@
 	</div>
 
 	<div class="days">
-			<div class="day" ng-repeat="day in calendar.days">
-				<p ng-show="day.day_text != 0">{{day.day_text}}</p>
-			</div>
+		<div class="day" ng-repeat="day in calendar.days">
+			<p ng-show="day.date_number != 0 && day.date_number <= calendar.numberOfDays">{{day.date_number}}</p>
+			<p ng-show="day.date_number != 0 && day.date_number <= calendar.numberOfDays">{{day.reservee}}</p>
+		</div>
 	</div>
 </div>

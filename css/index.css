@@ -5,7 +5,8 @@ body {
 	overflow: hidden;
 	background-color: black;
 	color: white;
-	overflow: none;
+	overflow-x: none;
+	overflow-y: none;
 	position: fixed;
 	font-family: 'Merriweather', serif;
 	font-weight: 300;
