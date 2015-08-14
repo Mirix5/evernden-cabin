@@ -6,6 +6,7 @@ body {
 	background-color: black;
 	color: white;
 	overflow: none;
+	position: fixed;
 	font-family: 'Merriweather', serif;
 	font-weight: 300;
 }

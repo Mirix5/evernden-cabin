@@ -20,7 +20,7 @@
 
 					days = [];
 					date_number = 0;
-					for(i=0; i<35; i++){
+					for(i=0; i<42; i++){
 						if(this.firstDayOfMonth == this.day_strings[i] || date_number > 0) {
 							date_number++;
 						}
