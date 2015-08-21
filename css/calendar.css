@@ -78,4 +78,25 @@
 	color: rgba(23, 89, 71, 1);
 	background-color: white;
 	border: 1px solid rgba(23, 89, 71, 1);
+	-webkit-transition: background-color 0.25s, color 0.25s;
+}
+
+.day:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
+}
+
+.faded {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.reserved {
+	color: white; 
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.today {
+	color: white;
+	background-color: #759696;
 }
