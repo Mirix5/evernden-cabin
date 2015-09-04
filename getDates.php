@@ -7,7 +7,13 @@
 	                    password=kyHGisoBER8UV-3pvAZbCF-1A0
 	                    sslmode=require");
 	
-	$result = pg_query($con, "SELECT * FROM ReservedDates");
+	// De-serialize json encoded post request to php.
+	$postdata = file_get_contents("php://input");
+	$request = json_decode($postdata);
+	$month = $request->month;
+	$year = $request->year;
+
+	$result = pg_query($con, "SELECT * FROM ReservedDates WHERE month=$month AND year=$year");
 	
 	$result_array = array();
 	while ($row = pg_fetch_row($result)) {
