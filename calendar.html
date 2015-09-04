@@ -1,11 +1,11 @@
 <link href="css/calendar.css" rel="stylesheet" type="text/css">
 
-<div class="calendar">
-	<div class="date-decrement" ng-click="calendar.constructCalendar(calendar.month - 1)"><h1> < </h1></div>
+<div class="calendar" ng-controller="calendarCtrlr">
+	<div class="date-decrement" ng-click="constructCalendar(month - 1)"><h1> < </h1></div>
 	<div class="date-heading">
-		<h1>{{calendar.month_string + ' ' + calendar.year}}</h1>
+		<h1>{{month_string + ' ' + year}}</h1>
 	</div>
-	<div class="date-increment"><h1 ng-click="calendar.constructCalendar(calendar.month + 1)"> > </h1></div>
+	<div class="date-increment"><h1 ng-click="constructCalendar(month + 1)"> > </h1></div>
 	<div class="day-names">
 		<ul>
 			<li>Sunday</li>
@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="days">
-		<div class="day" ng-repeat="day in calendar.days" ng-class="day.day_class">
+		<div class="day" ng-repeat="day in days" ng-class="day.day_class">
 			<p>{{day.date_number}}</p>
 			<p>{{day.reservee}}</p>
 		</div>
