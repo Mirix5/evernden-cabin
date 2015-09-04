@@ -51,7 +51,7 @@
 
 		$scope.constructDays = function(response) {
 			days_reserved = response.data;
-			console.log(days_reserved);
+
 		    for(i = 0; i < 42; i++) {
 		    	day = {
 		    		day_id: i,
@@ -63,6 +63,13 @@
 		    		date_number++;
 		    		day.date_number = date_number;
 		    		day.day_class = null;
+		    	}
+
+		    	for(j=0; j<days_reserved.length;j++){
+		    		if(date_number == days_reserved[j][1]) {
+		    			day.day_class = "reserved";
+		    			day.reservee = days_reserved[j][3];
+		    		}
 		    	}
 		    	$scope.days.push(day);
 		    }
