@@ -54,7 +54,7 @@
 
 		    for(i = 0; i < 42; i++) {
 		    	day = {
-		    		day_id: i,
+		    		id: i,
 		    		date_number: null,
 		    		reservee: "",
 		    		day_class: "faded"
@@ -75,11 +75,32 @@
 		    }
 		};
 
+		$scope.expandDay = function(day) {
+			if(day.date_number) {
+				$scope.modal_heading = $scope.month_string + ' ' + day.date_number;
+				if(day.reservee) {
+					$scope.modal_body = 'Reserved by ' + day.reservee + '.';
+					$scope.body_class = "reserved";
+				} else {
+					$scope.modal_body = 'Leave your name and reserve this day. ';
+					$scope.body_class = 'unreserved';
+				}
+
+				$('.day-modal').addClass("modal-opened");
+			} else {
+				return;
+			}
+		};
+
+		$scope.closeDay = function() {
+			$('.day-modal').removeClass("modal-opened");
+		}
+
 		var date = new Date();
+		$scope.modal_heading = '';
 		$scope.day = date.getDate();
 		$scope.month = date.getMonth();
 		$scope.year = date.getYear() + 1900;
 		$scope.constructCalendar($scope.month);
-		console.log($scope.days);
 	}]);
 })();

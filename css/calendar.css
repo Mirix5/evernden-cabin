@@ -91,12 +91,78 @@
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
+.unreserved {
+	color: rgba(23, 89, 71, 1);
+	background-color: white;
+}
+
 .reserved {
 	color: white; 
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: #a2bcb5;
 }
 
 .today {
 	color: white;
 	background-color: #759696;
+}
+
+
+.day-modal {
+	position: absolute;
+	opacity: 0;
+	top: -100%;
+	height: 50vh;
+	width: 40vw;
+	left: 30vw;
+	border: 2px solid rgba(23, 89, 71, 1);
+
+	-webkit-transition: top 0.5s, opacity 0.5s;
+}
+
+.day-modal .heading {
+	position: relative;
+	font-family: 'Merriweather', serif;
+	font-size: 0;
+	top: -2%;
+	left: 0;
+	text-align: center;
+	background-color: white;
+	color: rgba(23, 89, 71, 1);
+	border-bottom: 2px solid rgba(23, 89, 71, 1);
+}
+
+.day-modal .heading h4 {
+	display: inline-block;
+	margin: 0;
+	width: 80%;
+	font-size: 20px;
+	font-weight: 100;
+}
+
+.modal-close-btn {
+	position: relative;
+	width: calc(20% - 2px);
+	display: inline-block;
+	font-size: 30px;
+	font-weight: 100;
+	padding: 5% 0;
+	border-left: 2px solid rgba(23, 89, 71, 1);
+}
+
+.modal-close-btn:hover {
+	cursor: pointer;
+	color: white;
+	background-color: rgba(23, 89, 71, 1);
+}
+
+.day-modal .body {
+	text-align: center;
+	position: relative;
+	font-size: 20px;
+	padding: 5% 0;
+}
+
+.modal-opened {
+	top: 10%;
+	opacity: 1;
 }

@@ -19,9 +19,17 @@
 	</div>
 
 	<div class="days">
-		<div class="day" ng-repeat="day in days" ng-class="day.day_class">
+		<div class="day" ng-repeat="day in days" ng-class="day.day_class" ng-click="expandDay(day)">
 			<p>{{day.date_number}}</p>
 			<p>{{day.reservee}}</p>
 		</div>
+	</div>
+
+	<div class="day-modal" ng-class="body_class">
+		<div class="heading"> 
+			<h4>{{modal_heading}}</h4>
+			<div class="modal-close-btn" ng-click="closeDay()"> X </div>
+		</div>
+		<div class="body"> {{modal_body}} </div>
 	</div>
 </div>
