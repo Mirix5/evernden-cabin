@@ -134,18 +134,17 @@
 .day-modal .heading h4 {
 	display: inline-block;
 	margin: 0;
-	width: 80%;
+	width: 94%;
 	font-size: 20px;
 	font-weight: 100;
 }
 
 .modal-close-btn {
 	position: relative;
-	width: calc(20% - 2px);
+	width: calc(6% - 2px);
 	display: inline-block;
 	font-size: 30px;
 	font-weight: 100;
-	padding: 5% 0;
 	border-left: 2px solid rgba(23, 89, 71, 1);
 }
 
