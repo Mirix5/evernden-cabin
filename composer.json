@@ -1,0 +1,11 @@
+{
+    "name": "jake/evernden-cabin",
+    "description": "init",
+    "authors": [
+        {
+            "name": "Jacob Gronert",
+            "email": "jacobgronert@gmail.com"
+        }
+    ],
+    "require": {}
+}
