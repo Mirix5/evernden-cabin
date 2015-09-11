@@ -58,5 +58,6 @@ photos {
 .modalOpen {
     /* Blur and de-color */
     -webkit-filter: blur(2px) opacity(70%);
+    filter: blur(2px) opacity(70%);
     pointer-events: none;
 }

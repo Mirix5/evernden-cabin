@@ -37,9 +37,13 @@ body {
 	font-family: 'Sacramento', sans-serif;
 	width: 100%;
 	-webkit-transform: translateY(-50vh);
+	transform: translateY(-50vh);
+	-moz-transform: translateY(-50vh);
 	opacity: 0;
 
 	-webkit-transition: -webkit-transform 0.8s, opacity 1s;
+	transition: transform 0.8s, opacity 1s;
+	-moz-transition: transform 0.8s, opacity 1s;
 }
 
 .heading h1 {
@@ -54,11 +58,15 @@ body {
 
 .heading-landing-pos {
 	-webkit-transform: translateY(37vh);
+	transform: translateY(37vh);
+	-moz-transform: translateY(37vh);
 	opacity: 1;
 }
 
 .heading-nav-pos {
 	-webkit-transform: translateY(1vh);
+	transform: translateY(1vh);
+	-moz-transform: translateY(1vh);
 	opacity: 1;
 }
 
@@ -75,6 +83,8 @@ body {
 	display: inline-block;
 	margin: 0 2vw;
 	-webkit-transition: -webkit-transform 0.25s;
+	transition: transform 0.25s;
+	-moz-transition: transform 0.25s;
 }
 
 .custom-button p {
@@ -85,6 +95,8 @@ body {
 	cursor: pointer;
 	color: #7BACCB;
 	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+	-moz-transform: translateY(-5px);
 }
 
 .underline {
@@ -96,6 +108,8 @@ body {
 .underline-hover {
 	width: 100%;
 	-webkit-transition: width 0.2s;
+	transition: width 0.2s;
+	-moz-transition: width 0.2s;
 }
 
 /* Loadable content div*/
@@ -108,8 +122,14 @@ body {
 	background-color: rgba(23, 89, 71, 1); /* #175947 */
 	-webkit-transition: -webkit-transform 0.7s;
 	-webkit-transform: translateY(100vh);
+	transition: transform 0.7s;
+	transform: translateY(100vh);
+	-moz-transition: transform 0.7s;
+	-moz-transform: translateY(100vh);
 }
 
 .nav-content-expand {
 	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+	-moz-transform: translateY(0px);
 }

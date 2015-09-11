@@ -79,6 +79,14 @@
 	background-color: white;
 	border: 1px solid rgba(23, 89, 71, 1);
 	-webkit-transition: background-color 0.25s, color 0.25s;
+	transition: background-color 0.25s, color 0.25s;
+}
+
+@-moz-document url-prefix() {
+    .day {
+    	height: 14%;
+		width: 14%;
+    }
 }
 
 .day:hover {
@@ -117,6 +125,7 @@
 	border: 2px solid rgba(23, 89, 71, 1);
 
 	-webkit-transition: top 0.5s, opacity 0.5s;
+	transition: top 0.5s, opacity 0.5s;
 }
 
 .day-modal .heading {
