@@ -21,6 +21,7 @@
 	}
 
 	/*[['MONTH', 'DAY', 'YEAR', 'NAME OF RESERVEE']]*/
+	pg_close($con);
 	echo json_encode($result_array);
 
 	/*

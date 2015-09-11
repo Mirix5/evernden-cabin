@@ -30,6 +30,12 @@
 			<h4>{{modal_heading}}</h4>
 			<div class="modal-close-btn" ng-click="closeDay()"> &#10006 </div>
 		</div>
-		<div class="body"> {{modal_body}} </div>
+		<div class="body"> 
+			{{modal_body}}
+			<div ng-show="input_display">
+				<input type='text' name='user' id='user' ng-model='reservee'>
+				<input type='button' value='submit' ng-click='reserveDate()'>
+			</div>
+		</div>
 	</div>
 </div>

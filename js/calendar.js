@@ -25,10 +25,7 @@
 			$scope.days = [];
 			days_reserved = [];
 
-			$http.post('getDates.php', {month: $scope.month, year: $scope.year}).
-			then(function(response) {
-				$scope.constructDays(response);
-			});
+			$scope.constructDays();
 		};
 
 		$scope.determineMonth = function(month) {
@@ -49,41 +46,57 @@
 			}
 		};
 
-		$scope.constructDays = function(response) {
-			days_reserved = response.data;
+		$scope.constructDays = function() {
+			$http.post('getDates.php', {month: $scope.month, year: $scope.year}).
+			then(function(response) {
+				days_reserved = response.data;
 
-		    for(i = 0; i < 42; i++) {
-		    	day = {
-		    		id: i,
-		    		date_number: null,
-		    		reservee: "",
-		    		day_class: "faded"
-		    	}
-		    	if(i == $scope.firstDayOfMonth || date_number > 0 && date_number < $scope.numberOfDays) {
-		    		date_number++;
-		    		day.date_number = date_number;
-		    		day.day_class = null;
-		    	}
+			    for(i = 0; i < 42; i++) {
+			    	day = {
+			    		id: i,
+			    		date_number: null,
+			    		reservee: "",
+			    		day_class: "faded"
+			    	}
+			    	if(i == $scope.firstDayOfMonth || date_number > 0 && date_number < $scope.numberOfDays) {
+			    		date_number++;
+			    		day.date_number = date_number;
+			    		day.day_class = null;
+			    	}
 
-		    	for(j=0; j<days_reserved.length;j++){
-		    		if(date_number == days_reserved[j][1]) {
-		    			day.day_class = "reserved";
-		    			day.reservee = days_reserved[j][3];
-		    		}
-		    	}
-		    	$scope.days.push(day);
-		    }
+			    	for(j=0; j<days_reserved.length;j++){
+			    		if(date_number == days_reserved[j][1]) {
+			    			day.day_class = "reserved";
+			    			day.reservee = days_reserved[j][3];
+			    		}
+			    	}
+			    	$scope.days.push(day);
+			    }
+			});
+		};
+
+		$scope.reserveDate = function(){
+			console.log($scope.reservee);
+			$http.post('reserveDates.php', {month: $scope.month, year: $scope.year, day: $scope.current_date, reservee: $scope.reservee}).
+			then(function(response) {
+				$scope.closeDay();
+				$scope.constructCalendar($scope.month);
+			});
 		};
 
 		$scope.expandDay = function(day) {
 			if(day.date_number) {
 				$scope.modal_heading = $scope.month_string + ' ' + day.date_number;
+				$scope.current_date = day.date_number;
 				if(day.reservee) {
 					$scope.modal_body = 'Reserved by ' + day.reservee + '.';
 					$scope.body_class = "reserved";
+					$scope.input_display = false;
 				} else {
 					$scope.modal_body = 'Leave your name and reserve this day. ';
 					$scope.body_class = 'unreserved';
+					$scope.input_display = true;
+					$scope.reservee = '';
 				}
 
 				$('.day-modal').addClass("modal-opened");
