@@ -36,6 +36,10 @@
 				<input type='text' name='user' id='user' ng-model='reservee'>
 				<input type='button' value='submit' ng-click='reserveDate()'>
 			</div>
+
+			<div ng-show="!input_display">
+				<input type='button' value='cancel' ng-click='cancelDate()'>
+			</div>
 		</div>
 	</div>
 </div>

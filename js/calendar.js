@@ -76,13 +76,20 @@
 		};
 
 		$scope.reserveDate = function(){
-			console.log($scope.reservee);
 			$http.post('reserveDates.php', {month: $scope.month, year: $scope.year, day: $scope.current_date, reservee: $scope.reservee}).
 			then(function(response) {
 				$scope.closeDay();
 				$scope.constructCalendar($scope.month);
 			});
 		};
+
+		$scope.cancelDate = function(){
+			$http.post('cancelDates.php', {month: $scope.month, year: $scope.year, day: $scope.current_date}).
+			then(function(response) {
+				$scope.closeDay();
+				$scope.constructCalendar($scope.month);
+			});
+		}
 
 		$scope.expandDay = function(day) {
 			if(day.date_number) {
