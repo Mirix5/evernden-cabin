@@ -1,10 +1,20 @@
 <link href="css/photos.css" rel="stylesheet" type="text/css">
 
+<!--
 <div class="album">
 	<div class="thumbs">
 		<div class="thumb" onclick="modalOpen()" ng-repeat="photo in album.photos" ng-click="album.current = album.photos.indexOf(photo)">
 			<img ng-src="{{photo}}"></img>
 		</div>
+	</div>
+</div>
+-->
+
+<div id="mygallery" >
+	<div ng-repeat="photo in album.photos" ng-click="album.current=album.photos.indexOf(photo)">
+	    <a href="{{photo}}" target='_blank'>
+	        <img ng-src="{{photo}}"/>
+	    </a>
 	</div>
 </div>
 

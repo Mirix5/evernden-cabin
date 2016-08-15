@@ -9,13 +9,19 @@
 	});
 })();
 
-
 function navClick() {
 	$(".heading").removeClass("heading-landing-pos");
 	$(".heading").addClass("heading-nav-pos");
 	$(".nav-content").addClass("nav-content-expand");
 	$("body").css("overflow-y", "scroll");
 	$("body").css("position", "static");
+	$('#mygallery').justifiedGallery({
+	    rowHeight : 200,
+	    margins : 3,
+	    randomize: true,
+	    cssAnimation: true
+	});
+	$("#mygallery").justifiedGallery();
 }
 
 function headingClick() {

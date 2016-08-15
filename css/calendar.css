@@ -118,7 +118,7 @@
 .day-modal {
 	position: absolute;
 	opacity: 0;
-	top: -100%;
+	top: -200%;
 	height: 50vh;
 	width: 40vw;
 	left: 30vw;
