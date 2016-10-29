@@ -9,7 +9,7 @@
 				this.photos =  ['images/Uploaded_Photos/Northspur_Sign.jpg', 'images/Uploaded_Photos/tracks.jpg', 'images/Uploaded_Photos/Tree.jpg',
 								'images/Uploaded_Photos/Kings Hole 1.jpg', 'images/Uploaded_Photos/Kings Hole 2.jpg', 'images/Uploaded_Photos/Kings Hole 3.jpg',
 								'images/Uploaded_Photos/Kings Hole 4.jpg', 'images/Uploaded_Photos/Kings Hole Sign.jpg', 'images/Uploaded_Photos/River.jpg',
-								'images/tree.jpg'];
+								'images/tree.jpg', 'images/Uploaded_Photos/IMAG0310.jpg', 'images/Uploaded_Photos/IMAG0316.jpg'];
 				this.current = 0;
 			},
 			controllerAs: 'album'

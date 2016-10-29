@@ -70,9 +70,10 @@
 }
 
 .day {
-	display: inline-block;
+	display: block;
+	position: relative;
 	float: left;
-	height: calc(14.28% - 2px);
+	height: 14.28vh;
 	width: calc(14.28% - 2px);
 	font-size: 1.2vw;
 	color: rgba(23, 89, 71, 1);

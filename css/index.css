@@ -12,7 +12,21 @@ body {
 	font-weight: 300;
 }
 
+.footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-style: italic;
+	font-family: serif;
+	background-color: rgba(0, 0, 0, 0.0);
+}
+
 /*Background */
+
+#background-video {
+	position: absolute;
+	z-index: -100;
+}
 
 .background-image {
 	position: absolute;
@@ -20,6 +34,22 @@ body {
 	opacity: 0.6;
 	width: 100vw;
 	height: 100vh;
+}
+
+.volume {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+}
+
+.volume:hover {
+	cursor: pointer;
+}
+
+.invisible {
+	display: none;
 }
 
 /* Content wraps everything and resizes based on media width */
@@ -47,6 +77,7 @@ body {
 }
 
 .heading h1 {
+	display: inline;
 	margin: 0;
 	font-weight: 100;
 	margin: 0;

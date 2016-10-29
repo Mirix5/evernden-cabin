@@ -1,3 +1,4 @@
+<!doctype html>
 <html ng-app="cabinApp">
 <head>
     <title>The Cabin</title>
@@ -7,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/justifiedGallery.css" />
+    <link rel="stylesheet" href="css/lib/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <script src="js/libs/jquery-3.1.0.js"></script>
     <script src="js/libs/justifiedGallery.js"></script>
@@ -14,12 +16,27 @@
     <script src="js/app.js"></script>
     <script src="js/photos.js"></script>
     <script src="js/calendar.js"></script>
+    <script src="js/video.js"></script>
 
 </head>
 
 <body class="no-scroll">
 
     <img class="background-image" src="images/cabin.jpg">
+
+    <video id="background-video" preload="auto" autoplay loop>
+        <source src="images/Uploaded Videos/rain.webm" type="video/webm">
+    </video>
+    <audio id="background-audio" loop muted>
+        <source src="images/Uploaded Videos/rain.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class='volume' onclick='volume()'>
+        <span class="fa-stack fa-lg">
+            <i id='speaker' class="fa fa-volume-up fa-stack-1x"></i>
+            <i id='ban' class="fa fa-stack-2x text-danger"></i>
+        </span>
+    </div>
 
     <div class="content">
         <div class="heading heading-landing-pos">
@@ -43,6 +60,10 @@
             <div ng-show="nav == 1"><news ng-show="nav == 1"></news></div>
             <div ng-show="nav == 2"><photos></photos></div>
             <div ng-show="nav == 3"><calendar></calendar></div>
+        </div>
+
+        <div class='footer'>
+            <span class='fa-md'>Works best on chome! <i class="fa fa-chrome fa-2x fa-fw"></i></span>
         </div>
     </div>
 
