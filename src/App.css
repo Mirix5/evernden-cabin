@@ -1,5 +1,15 @@
 body {
   margin: 0;
+  overflow: hidden;
+}
+
+.deck-video {
+  width: 100%;
+  overflow: hidden;
+}
+
+.rain-audio {
+  display: none;
 }
 
 .App {
