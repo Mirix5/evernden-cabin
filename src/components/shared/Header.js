@@ -5,7 +5,7 @@ export class Header extends Component {
   constructor(props) {
     super();
     this.state = {
-      middle: true
+      middle: props.middle
     }
   }
 

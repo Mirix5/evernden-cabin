@@ -12,6 +12,7 @@
 .logo {
   cursor: pointer;
   display: inline-block;
+  margin: 5px;
 }
 
 .navigation-list {
@@ -25,10 +26,25 @@
 }
 
 .top {
-  top: 0%;
+  top: 2%;
 }
 
 .middle {
   top: 40%;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+  display: inline;
+  margin: 0px 25px;
+  transition: color 0.2s;
+}
+
+li:hover {
+  color: lightsteelblue;
+}

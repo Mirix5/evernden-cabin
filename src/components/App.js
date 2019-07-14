@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Header } from './shared/Header'
+import { Content } from './Content'
 import "./../css/App.css";
 
 class App extends Component{
@@ -7,7 +8,8 @@ class App extends Component{
     return(
       <div className="App">
         <div className='background-overlay'></div>
-        <Header />
+        <Header middle={false} />
+        <Content />
         <img className='background-image' src="/images/deck.png" type="image" />
       </div>
     );
