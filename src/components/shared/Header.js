@@ -9,20 +9,24 @@ export class Header extends Component {
     }
   }
 
-  reposition() {
-    this.setState({middle: !this.state.middle});
+  repositionTop() {
+    this.setState({middle: false});
+  }
+
+  repositionMiddle() {
+    this.setState({middle: true});
   }
 
   render(){
     let position = this.state.middle ? "middle" : "top";
 
     return(
-      <div className={"Header "+position} onClick={this.reposition.bind(this)}>
-        <h1 className='logo underline'> The Evernden Cabin </h1>
+      <div className={"Header noselect "+position} >
+        <h1 className='logo underline' onClick={this.repositionMiddle.bind(this)}> The Evernden Cabin </h1>
         <ul className='navigation-list' >
-          <li>News</li>
-          <li>Photos</li>
-          <li>Calendar</li>
+          <li onClick={this.repositionTop.bind(this)}>news</li>
+          <li onClick={this.repositionTop.bind(this)}>photos</li>
+          <li onClick={this.repositionTop.bind(this)}>calendar</li>
         </ul>
       </div>
     );

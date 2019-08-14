@@ -1,0 +1,13 @@
+.Content {
+  color: white;
+  background-color: #175947;
+  position: absolute;
+}
+
+.hidden {
+  top: 100%;
+}
+
+.visible {
+  top: 20%;
+}
