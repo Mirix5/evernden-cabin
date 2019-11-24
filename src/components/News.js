@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./../css/Content.css";
+import "./../css/News.css";
 
-export class Content extends Component{
+export class News extends Component{
   constructor(props) {
     super();
     this.state = {
@@ -17,8 +17,8 @@ export class Content extends Component{
     let visibility = this.state.visibility ? "visible" : "hidden";
 
     return(
-      <div className={"Content "+visibility}>
-        <div>This is the content.</div>
+      <div className={"News "+visibility}>
+        <div>This is the news.</div>
       </div>
     );
   }

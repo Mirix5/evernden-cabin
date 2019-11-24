@@ -1,6 +1,15 @@
 import React, {Component} from 'react';
 import "./../../css/header.css";
 import { Content } from '../Content';
+import { News } from '../News';
+import { Photos } from '../Photos';
+import { Calendar } from '../Calendar';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 export class Header extends Component {
   constructor(props) {
@@ -24,13 +33,34 @@ export class Header extends Component {
 
     return(
       <div className={"Header noselect "+position} >
-        <h1 className='logo underline' onClick={this.repositionMiddle.bind(this)}> The Evernden Cabin </h1>
-        <ul className='navigation-list' >
-          <li onClick={this.repositionTop.bind(this)}>news</li>
-          <li onClick={this.repositionTop.bind(this)}>photos</li>
-          <li onClick={this.repositionTop.bind(this)}>calendar</li>
-        </ul>
-        <Content visibility={this.state.contentVisible}/>
+        <Router>
+          <Link to="/"
+            ><h1 className='logo underline' onClick={this.repositionMiddle.bind(this)}> The Evernden Cabin </h1>
+          </Link>
+          <ul className='navigation-list' >
+            <li onClick={this.repositionTop.bind(this)}>
+              <Link to="/news">news</Link>
+            </li>
+            <li onClick={this.repositionTop.bind(this)}>
+              <Link to="/photos">photos</Link>
+            </li>
+            <li onClick={this.repositionTop.bind(this)}>
+              <Link to="/calendar">calendar</Link>
+            </li>
+          </ul>
+
+          <Switch>
+            <Route path="/news">
+              <News visibility={this.state.contentVisible}/>
+            </Route>
+            <Route path="/photos">
+              <Photos visibility={this.state.contentVisible}/>
+            </Route>
+            <Route path="/calendar">
+              <Calendar visibility={this.state.contentVisible}/>
+            </Route>
+          </Switch>
+        </Router>
       </div>
     );
   }

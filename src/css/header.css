@@ -2,12 +2,16 @@
   background-color:rgba(0, 0, 0, 0);
   color: white;
   width: 100vw;
-  height: 20vh;
+  max-height: 15vh;
   transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
   position: absolute;
   font-family: 'Sacramento', serif;
   font-size: 2em;
   font-weight: 100px;
+}
+
+a {
+  color: white;
 }
 
 .logo {
