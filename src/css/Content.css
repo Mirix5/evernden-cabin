@@ -2,12 +2,15 @@
   color: white;
   background-color: #175947;
   position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 22px;
 }
 
 .hidden {
-  top: 100%;
+  top: 100vh;
 }
 
 .visible {
-  top: 20%;
+  top: 20vh;
 }

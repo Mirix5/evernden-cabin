@@ -5,12 +5,17 @@ export class Content extends Component{
   constructor(props) {
     super();
     this.state = {
-      visibility: false
+      visibility: props.visibility
     }
+  }
+
+  componentWillReceiveProps({visibility}) {
+    this.setState({...this.state, visibility})
   }
 
   render(){
     let visibility = this.state.visibility ? "visible" : "hidden";
+    console.log(visibility)
 
     return(
       <div className={"Content "+visibility}>

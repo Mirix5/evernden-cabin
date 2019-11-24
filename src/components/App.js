@@ -8,8 +8,7 @@ class App extends Component{
     return(
       <div className="App">
         <div className='background-overlay'></div>
-        <Header />
-        <Content />
+        <Header middle={true} />
         <img className='background-image' src="/images/deck.png" type="image" />
       </div>
     );

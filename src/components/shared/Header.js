@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
 import "./../../css/header.css";
+import { Content } from '../Content';
 
 export class Header extends Component {
   constructor(props) {
     super();
     this.state = {
-      middle: props.middle
+      middle: true,
+      contentVisible: false
     }
   }
 
   repositionTop() {
-    this.setState({middle: false});
+    this.setState({middle: false, contentVisible: true});
   }
 
   repositionMiddle() {
-    this.setState({middle: true});
+    this.setState({middle: true, contentVisible: false});
   }
 
   render(){
@@ -28,6 +30,7 @@ export class Header extends Component {
           <li onClick={this.repositionTop.bind(this)}>photos</li>
           <li onClick={this.repositionTop.bind(this)}>calendar</li>
         </ul>
+        <Content visibility={this.state.contentVisible}/>
       </div>
     );
   }
