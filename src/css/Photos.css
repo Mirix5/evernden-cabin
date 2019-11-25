@@ -23,12 +23,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90vw;
+  width: 95vw;
   background-color: #175947;
-}
-
-img {
-  margin: 2px;
 }
 
 .photo {
