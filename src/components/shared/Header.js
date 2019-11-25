@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import "./../../css/header.css";
-import { Content } from '../Content';
 import { News } from '../News';
 import { Photos } from '../Photos';
 import { Calendar } from '../Calendar';

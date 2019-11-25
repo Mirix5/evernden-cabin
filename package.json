@@ -30,7 +30,9 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.5.2",
+    "react-photo-grid": "^1.4.4",
+    "react-router-dom": "^5.1.2"
   }
 }
