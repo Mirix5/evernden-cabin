@@ -67,7 +67,7 @@ export class Photos extends Component{
             <img key={photo.name} src={photo.src} alt="cabin" />
           )} */}
 
-          <Gallery images={this.state.photos}/>
+          <Gallery images={this.state.photos} enableLightbox={true}/>
         </div>
       </div>
     );

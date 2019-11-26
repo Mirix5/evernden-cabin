@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .App {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   background-color:black;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
 }

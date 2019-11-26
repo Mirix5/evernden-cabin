@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
 import "./../css/Calendar.css";
+import "./../css/main.scss";
 
-export class Calendar extends Component{
+export class CabinCalendar extends Component{
   constructor(props) {
     super();
     this.state = {
@@ -19,6 +22,9 @@ export class Calendar extends Component{
     return(
       <div className={"Calendar "+visibility}>
         <div>Calendar</div>
+        <div className="calendar-wrapper">
+          <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]} />
+        </div>
       </div>
     );
   }

@@ -28,7 +28,7 @@ a {
 
 .navigation-list li {
   display: inline-block;
-  margin: 0px 25px;
+  padding: 0px 25px;
   cursor: pointer;
   transition: color 0.2s;
 }
