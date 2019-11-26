@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "start-heroku":"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
