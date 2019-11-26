@@ -4,8 +4,9 @@
   "description": "Family cabin app.",
   "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --port $PORT",
-    "start-heroku":"",
+    "start": "webpack-dev-server --mode development",
+    "start-heroku": "",
+    "build":"webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,7 +32,7 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
