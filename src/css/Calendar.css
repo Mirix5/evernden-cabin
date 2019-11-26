@@ -1,0 +1,34 @@
+.Calendar {
+  color: white;
+  background-color: #175947;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+}
+
+.hidden {
+  top: 100vh;
+  transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.visible {
+  top: 17vh;
+  transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.calendar-wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 8px;;
+  width: 90vw;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+}
+
+.fc-body {
+  color:black;
+  background-color: white;
+}
+
+.fc-other-month {
+  background-color: #e6e6e6;
+}
