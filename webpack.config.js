@@ -33,7 +33,6 @@ module.exports = () => {
     devServer: {
       contentBase: path.join(__dirname, "public/"),
       port: port,
-      publicPath: "http://localhost:3000/dist/",
       hotOnly: true,
       historyApiFallback: true
     },
