@@ -27,14 +27,13 @@ module.exports = () => {
     resolve: { extensions: ["*", ".js", ".jsx"] },
     output: {
       path: path.resolve(__dirname, "dist/"),
-      globalObject: typeof self !== 'undefined' ? self : this,
+      globalObject: "this",
       publicPath: "/dist/",
       filename: "bundle.js"
     },
     devServer: {
       contentBase: path.join(__dirname, "public/"),
       port: port,
-      hotOnly: true,
       historyApiFallback: true
     },
     plugins: [new webpack.HotModuleReplacementPlugin()]

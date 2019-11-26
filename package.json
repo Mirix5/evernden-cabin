@@ -4,10 +4,11 @@
   "description": "Family cabin app.",
   "main": "server.js",
   "scripts": {
-    "start": "node ./dist/bundle.js",
+    "start": "webpack-dev-server --mode development",
     "dev": "webpack-dev-server --mode development",
-    "build":"webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"rm -rf dist && webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
