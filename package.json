@@ -4,7 +4,7 @@
   "description": "Family cabin app.",
   "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --port $PORT --host 0.0.0.0",
+    "start": "webpack-dev-server --mode development --port $PORT",
     "start-heroku":"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
