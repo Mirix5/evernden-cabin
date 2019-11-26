@@ -17,6 +17,9 @@
     "url": "https://github.com/Mirix5/evernden-cabin/issues"
   },
   "homepage": "https://github.com/Mirix5/evernden-cabin#readme",
+  "engines": {
+    "node": "12.x"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
