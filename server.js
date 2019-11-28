@@ -15,6 +15,7 @@ app.get('/api/getList', (req,res) => {
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
+    console.log("request received. routing...")
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
