@@ -25,6 +25,7 @@ export class CabinCalendar extends Component{
         <div className="calendar-wrapper">
           <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]} />
         </div>
+        <div className="calendar-footer"></div>
       </div>
     );
   }

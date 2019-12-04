@@ -32,3 +32,7 @@
 .fc-other-month {
   background-color: #e6e6e6;
 }
+
+.calendar-footer {
+  height: 50px;
+}
