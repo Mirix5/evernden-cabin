@@ -26,6 +26,15 @@ db.once('open', function() {
   logger.info('Successfully connected to database.')
 });
 
+const articleSchema = new mongoose.Schema({
+    title: String,
+    author: String,
+    date: String,
+    body: String
+}, {collection:'Articles'});
+
+const Article = mongoose.model('Article', articleSchema);
+
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
@@ -38,14 +47,6 @@ app.get('/api/getList', (req,res) => {
 });
 
 app.get('/api/getArticles', (req, res) => {
-    var articleSchema = new mongoose.Schema({
-        title: String,
-        author: String,
-        date: String,
-        body: String
-    }, {collection:'Articles'});
-    
-    var Article = mongoose.model('Article', articleSchema);
     Article.find(function(err, articles){
         if(err) return logger.error(err);
         logger.debug(articles);
