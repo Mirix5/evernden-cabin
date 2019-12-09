@@ -40,6 +40,8 @@ export class Header extends Component {
     let loggedIn = this.state.loggedIn;
     if(!this.state.contentVisible){
       document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "visible";
     }
 
     if(loggedIn){
