@@ -15,6 +15,10 @@ export class News extends Component{
     this.getArticles();
   }
 
+  componentWillMount(){
+    document.body.style.overflowY = "hidden";
+  }
+
   componentWillReceiveProps({visibility}) {
     this.setState({...this.state, visibility})
   }
@@ -42,7 +46,7 @@ export class News extends Component{
               <p>
                 no articles found
               </p>
-              <Article />
+              {/* <Article /> */}
             </div>
           )
         }

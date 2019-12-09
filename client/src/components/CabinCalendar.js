@@ -16,6 +16,14 @@ export class CabinCalendar extends Component{
     this.setState({...this.state, visibility})
   }
 
+  componentWillMount(){
+      document.body.style.overflowY = "visible";
+  }
+
+  componentWillUnount(){
+      document.body.style.overflowY = "hidden";
+  }
+
   render(){
     let visibility = this.state.visibility ? "visible" : "hidden";
 
