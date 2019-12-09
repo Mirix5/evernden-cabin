@@ -4,8 +4,8 @@
   "description": "Family cabin app.",
   "main": "server.js",
   "scripts": {
-    "start": "LOG_LEVEL=FATAL node server.js",
-    "dev": "LOG_LEVEL=DEBUG  nodemon server.js",
+    "start": "NODE_ENV=production LOG_LEVEL=FATAL node server.js",
+    "dev": "NODE_ENV=production LOG_LEVEL=DEBUG  nodemon server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
@@ -35,12 +35,15 @@
     "@fullcalendar/core": "^4.3.1",
     "@fullcalendar/daygrid": "^4.3.0",
     "@fullcalendar/react": "^4.3.0",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "log4js": "^6.1.0",
     "moment": "^2.24.0",
     "mongoose": "^5.7.13",
     "node-sass": "^4.13.0",
     "nodemon": "^2.0.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "react": "^16.12.0",
     "react-big-calendar": "^0.23.0",
     "react-dom": "^16.7.0",
