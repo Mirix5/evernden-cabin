@@ -16,7 +16,7 @@ export class Header extends Component {
     super();
     this.state = {
       middle: true,
-      loggedIn: false,
+      loggedIn: true,
       contentVisible: false
     }
 

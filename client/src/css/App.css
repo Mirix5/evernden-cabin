@@ -5,6 +5,10 @@ body {
   height: 100vh;
 }
 
+.overflowy-visible {
+  overflow-y: visible;
+}
+
 .App {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
