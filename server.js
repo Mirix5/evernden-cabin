@@ -85,11 +85,16 @@ app.get('/api/getList', (req,res) => {
 });
 
 app.get('/api/getArticles', (req, res) => {
-    Article.find(function(err, articles){
+    Article.find({}).sort('-date').exec(function(err, articles) { 
         if(err) return logger.error(err);
         logger.debug(articles);
         res.json(articles); 
-    })
+    });
+    // Article.find(function(err, articles){
+    //     if(err) return logger.error(err);
+    //     logger.debug(articles);
+    //     res.json(articles); 
+    // })
 });
 
 app.get('/api/users', (req, res) => {
@@ -120,6 +125,19 @@ app.get('/error', (req, res) => {
     res.status(400);
     res.send("invalid credentials")
 });
+
+app.post('/api/form', (req, res) => {
+    logger.debug('New article being posted...')
+    logger.debug(req.body)
+
+    var article = new Article(req.body);
+    article.save(function (err, art) {
+        if (err) return logger.error(err);
+        logger.debug(art.title + " saved to article collection.");
+    })
+
+    res.send(200)
+})
 
 passport.serializeUser(function(user, cb) {
   cb(null, user.id);

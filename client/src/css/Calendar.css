@@ -3,6 +3,7 @@
   background-color: #175947;
   font-family: 'Times New Roman', Times, serif;
   font-size: 22px;
+  min-height: 100vh;
 }
 
 .hidden {
