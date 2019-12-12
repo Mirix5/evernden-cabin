@@ -35,7 +35,6 @@ export class ArticleForm extends Component {
               console.log("submitting article "+article._id)
             }
         }).catch(error => {
-            console.log('article submission error: ')
             console.log(error); 
         })
     }

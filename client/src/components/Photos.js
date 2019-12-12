@@ -76,10 +76,10 @@ export class Photos extends Component{
     this.setState({...this.state, visibility})
   }
 
-  lightboxClose(){
-    console.log("lightbox closing");
-    document.body.style.overflow = "visible";
-  }
+  // lightboxClose(){
+  //   console.log("lightbox closing");
+  //   document.body.style.overflow = "visible";
+  // }
 
   render(){
     let visibility = this.state.visibility ? "visible" : "hidden";
@@ -98,7 +98,6 @@ export class Photos extends Component{
             backdropClosesModal={true} 
             showLightboxThumbnails={true} 
             lightboxWidth={2048}
-            lightboxWillClose={this.lightboxClose()}
             />
         </div>
       </div>
