@@ -87,8 +87,7 @@ app.get('/api/getList', (req,res) => {
 app.get('/api/getArticles', (req, res) => {
     Article.find({}).sort('-date').exec(function(err, articles) { 
         if(err) return logger.error(err);
-        logger.debug(articles);
-        res.json(articles); 
+        res.json(articles);
     });
     // Article.find(function(err, articles){
     //     if(err) return logger.error(err);
@@ -134,9 +133,9 @@ app.post('/api/form', (req, res) => {
     article.save(function (err, art) {
         if (err) return logger.error(err);
         logger.debug(art.title + " saved to article collection.");
+        logger.debug(art)
+        res.status(200).json({_id: art._id})
     })
-
-    res.send(200)
 })
 
 passport.serializeUser(function(user, cb) {

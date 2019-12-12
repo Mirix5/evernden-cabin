@@ -30,7 +30,9 @@ export class ArticleForm extends Component {
         axios.post('/api/form', article)
         .then(response => {
             if (response.status === 200) {
+              article._id = response.data._id
               this.props.submitForm(article);
+              console.log("submitting article "+article._id)
             }
         }).catch(error => {
             console.log('article submission error: ')

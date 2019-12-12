@@ -40,15 +40,19 @@ export class News extends Component{
   }
 
   submitForm(article){
+    console.log("posting article"+article)
+    var newArticles = this.state.articles
+    newArticles.unshift(article)
     this.setState({
       formVisible: false,
-      articles: [ article, ...this.state.articles]
+      articles:  newArticles
     })
   }
 
   render(){
     let visibility = this.state.visibility ? "visible" : "hidden";
     let articles = this.state.articles;
+    // console.log(JSON.stringify(articles))
 
     return(
       <div className={"News "+visibility}>
@@ -70,7 +74,7 @@ export class News extends Component{
           }
           {articles.length ? (
             articles.map((article) => 
-              <Article title={article.title} author={article.author} date={article.date} body={article.body} />
+              <Article title={article.title} author={article.author} date={article.date} body={article.body} key={article._id}/>
             )
           ) : (
             <div>
