@@ -1,5 +1,7 @@
 .Calendar {
   color: white;
+  position: absolute;
+  width: 100vw;
   background-color: #175947;
   font-family: 'Times New Roman', Times, serif;
   font-size: 22px;
@@ -36,4 +38,8 @@
 
 .calendar-footer {
   height: 50px;
+}
+
+.fc th {
+  background-color: rgb(88, 143, 143);
 }

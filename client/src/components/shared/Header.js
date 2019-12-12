@@ -16,7 +16,7 @@ export class Header extends Component {
     super();
     this.state = {
       middle: true,
-      loggedIn: true,
+      loggedIn: false,
       contentVisible: false
     }
 
@@ -46,7 +46,7 @@ export class Header extends Component {
 
     if(loggedIn){
       return(
-        <div className={"Header noselect "+position} >
+        <div className={"Header "+position} >
           <Router>
             <Link to="/">
               <h1 className='logo underline' onClick={this.repositionMiddle.bind(this)}> The Evernden Cabin </h1>
