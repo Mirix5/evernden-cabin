@@ -10,6 +10,13 @@
   font-weight: 100px;
 }
 
+.error-text {
+  color: rgb(214, 159, 159);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+}
+
 a {
   color: white;
 }

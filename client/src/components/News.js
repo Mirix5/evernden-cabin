@@ -26,7 +26,7 @@ export class News extends Component{
   }
 
   getArticles(){
-    fetch('/api/getArticles')
+    fetch('/api/articles')
     .then(res => res.json())
     .then(articles => this.setState({ articles }))
   }

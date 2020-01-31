@@ -45,6 +45,11 @@ const articleSchema = new mongoose.Schema({
 }, {collection:'Articles'});
 const Article = mongoose.model('Article', articleSchema);
 
+const reservationSchema = new mongoose.Schema({
+    title: String,
+    date: Date
+}, {collection:'Reservations'})
+const Reservation = mongoose.model('Reservation', reservationSchema);
 
 // Serve the static files from the React app
 app.use(bodyParser.json());
@@ -84,7 +89,7 @@ app.get('/api/getList', (req,res) => {
     logger.info('Sent list of items');
 });
 
-app.get('/api/getArticles', (req, res) => {
+app.get('/api/articles', (req, res) => {
     Article.find({}).sort('-date').exec(function(err, articles) { 
         if(err) return logger.error(err);
         res.json(articles);
@@ -101,6 +106,14 @@ app.get('/api/users', (req, res) => {
         if(err) return logger.error(err);
         logger.debug(users);
         res.json(users); 
+    })
+});
+
+app.get('/api/reservations', (req, res) => {
+    Reservation.find(function(err, reservations){
+        if(err) return logger.error(err);
+        logger.debug(reservations);
+        res.json(reservations); 
     })
 });
 
@@ -121,7 +134,7 @@ app.get('/success', (req, res) => {
 });
 
 app.get('/error', (req, res) => {
-    res.status(400);
+    res.status(401);
     res.send("invalid credentials")
 });
 

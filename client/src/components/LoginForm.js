@@ -7,7 +7,9 @@ export class LoginForm extends Component {
         this.state = {
             username: '',
             password: '',
-            redirectTo: null
+            redirectTo: null,
+            error: false,
+            errorText: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -35,14 +37,16 @@ export class LoginForm extends Component {
                         loggedIn: true
                     })
                     console.log('login success')
-                    // update the state to redirect to home
-                    // this.setState({
-                    //     redirectTo: '/'
-                    // })
+                    this.setState({
+                        error: false
+                    })
                 }
             }).catch(error => {
-                console.log('login error: ')
-                console.log(error); 
+                this.setState({
+                    error: true,
+                    errorText: 'User name or password is incorrect.'
+                })
+                console.log(error);
             })
     }
 
@@ -70,8 +74,14 @@ export class LoginForm extends Component {
                         value={this.state.password}
                         onChange={this.handleChange}
                     />
-                  </div>
-                  <button onClick={this.handleSubmit} type="submit">Login</button>
+                    </div>
+                    <button onClick={this.handleSubmit} type="submit">Login</button>
+                        {this.state.error ? (
+                            <p className='error-text'>{this.state.errorText}</p>
+                        ):(
+                            <p></p>
+                        )
+                        }
               </form>
           </div>
       )

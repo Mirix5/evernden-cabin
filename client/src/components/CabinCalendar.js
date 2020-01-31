@@ -11,7 +11,7 @@ export class CabinCalendar extends Component{
     super();
     this.state = {
       visibility: props.visibility,
-      events: []
+      reservations: []
     }
   }
 
@@ -24,13 +24,21 @@ export class CabinCalendar extends Component{
   }
 
   componentWillMount(){
-    var year = new Date().getFullYear()
-    var month = new Date().getMonth()
-    var day = 5
-    var eventList = [ {title: 'my event', date: format(new Date(year, month, day), 'yyyy-MM-dd')}, 
-                      {title: 'my event', date: format(new Date(year, month, day+8), 'yyyy-MM-dd')},
-                      {title: 'my event', date: format(new Date(year, month, day+17), 'yyyy-MM-dd')}]
-    this.setState({events: eventList})
+    // var year = new Date().getFullYear()
+    // var month = new Date().getMonth()
+    // var day = 5
+    // var eventList = [ {title: 'my event', date: format(new Date(year, month, day), 'yyyy-MM-dd')}, 
+    //                   {title: 'my event', date: format(new Date(year, month, day+8), 'yyyy-MM-dd')},
+    //                   {title: 'my event', date: format(new Date(year, month, day+17), 'yyyy-MM-dd')}]
+    // this.setState({events: eventList})
+
+    this.getReservations()
+  }
+
+  getReservations(){
+    fetch('/api/reservations')
+    .then(res => res.json())
+    .then(reservations => this.setState({ reservations }))
   }
 
   handleDateClick = (arg) => {
@@ -39,13 +47,13 @@ export class CabinCalendar extends Component{
 
   render(){
     let visibility = this.state.visibility ? "visible" : "hidden"
-    let eventList = this.state.events
+    let reservations = this.state.reservations
 
     return(
       <div className={"Calendar "+visibility}>
         <h2>Calendar</h2>
         <div className="calendar-wrapper">
-          <FullCalendar defaultView="dayGridMonth" dateClick={this.handleDateClick} plugins={[ dayGridPlugin, interactionPlugin ]} events={ eventList }/>
+          <FullCalendar defaultView="dayGridMonth" dateClick={this.handleDateClick} plugins={[ dayGridPlugin, interactionPlugin ]} events={ reservations }/>
         </div>
         <div className="calendar-footer"></div>
       </div>
