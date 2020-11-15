@@ -43,3 +43,8 @@
 .fc th {
   background-color: rgb(88, 143, 143);
 }
+
+.fc-day:hover {
+  background-color: rgba(23,89,71, 0.3);
+  cursor: pointer;
+}

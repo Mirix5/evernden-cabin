@@ -19,6 +19,7 @@ export class News extends Component{
 
   componentDidMount() {
     this.getArticles();
+    document.body.style.overflowY = "visible";
   }
 
   componentWillReceiveProps({visibility}) {
