@@ -1,0 +1,32 @@
+.Documents {
+    color: white;
+    background-color: #175947;
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 22px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.documents-list {
+    text-align: left;
+    padding: 0% 15%;
+} 
+
+.hidden {
+    top: 100vh;
+    transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+    overflow: hidden;
+}
+
+.visible {
+    top: 17vh;
+    transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.note {
+    font-size: 14px;
+    color: yellow;
+    padding-left: 16px;
+}

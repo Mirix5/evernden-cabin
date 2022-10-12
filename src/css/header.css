@@ -31,6 +31,7 @@ a {
   padding: 0px 25px;
   cursor: pointer;
   transition: color 0.2s;
+  font-family: 'Caveat', cursive;
 }
 
 .navigation-list li:hover {

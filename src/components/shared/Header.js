@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import "./../../css/header.css";
+import "./../../css/Header.css";
 import { News } from '../News';
 import { Photos } from '../Photos';
 import { CabinCalendar } from '../CabinCalendar';
+import { Documents } from '../Documents';
 import {
   BrowserRouter as Router,
   Switch,
@@ -46,6 +47,9 @@ export class Header extends Component {
             <li onClick={this.repositionTop.bind(this)}>
               <Link to="/calendar">calendar</Link>
             </li>
+            <li onClick={this.repositionTop.bind(this)}>
+              <Link to="/documents">documents</Link>
+            </li>
           </ul>
 
           <Switch>
@@ -57,6 +61,9 @@ export class Header extends Component {
             </Route>
             <Route path="/calendar">
               <CabinCalendar visibility={this.state.contentVisible}/>
+            </Route>
+            <Route path="/documents">
+              <Documents visibility={this.state.contentVisible}/>
             </Route>
           </Switch>
         </Router>

@@ -9,7 +9,7 @@ body {
   background-color:black;
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .background-overlay {
@@ -19,11 +19,18 @@ body {
   left: 0px;
   top: 0px;
   position: absolute;
+  overflow: hidden;
 }
 
 .background-image {
-  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   z-index: -100;
+}
+
+.background-img-wrapper {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }

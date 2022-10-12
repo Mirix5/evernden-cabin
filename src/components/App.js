@@ -6,9 +6,11 @@ class App extends Component{
   render(){
     return(
       <div className="App">
-        <div className='background-overlay'></div>
+        {/* <div className='background-overlay'></div> */}
         <Header middle={true} />
-        <img className='background-image' src="/images/deck.png" type="image" />
+        <div className="background-img-wrapper">
+          <img className='background-image' src="/images/kitchen.jpg" type="image" />
+        </div>
       </div>
     );
   }

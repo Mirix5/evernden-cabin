@@ -12,6 +12,7 @@
 .hidden {
   top: 100vh;
   transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+  overflow: hidden;
 }
 
 .visible {
@@ -27,6 +28,7 @@
   background-color: #175947;
 }
 
-.photo {
-  
+.pswp__img {
+  max-width: 80%;
+  object-fit: contain;
 }
