@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./../css/Photos.css";
-import Gallery from 'react-grid-gallery';
 
 export class Photos extends Component{
   constructor(props) {
@@ -35,8 +34,6 @@ export class Photos extends Component{
           {/* { this.state.photos.map((photo, key) => 
             <img key={photo.name} src={photo.src} alt="cabin" />
           )} */}
-
-          <Gallery images={this.state.photos} enableLightbox={true}/>
         </div>
       </div>
     );

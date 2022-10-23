@@ -1,34 +1,34 @@
 .Photos {
-  color: white;
-  background-color: #175947;
-  position: absolute;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 100;
-  font-size: 22px;
-  width: 100vw;
-  height: 100vh;
+    color: white;
+    background-color: #175947;
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 22px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .hidden {
-  top: 100vh;
-  transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
-  overflow: hidden;
+    top: 100vh;
+    transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+    overflow: hidden;
 }
 
 .visible {
-  top: 17vh;
-  transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+    top: 17vh;
+    transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .photo-grid {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95vw;
-  background-color: #175947;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95vw;
+    background-color: #175947;
 }
 
 .pswp__img {
-  max-width: 80%;
-  object-fit: contain;
+    max-width: 80%;
+    object-fit: contain;
 }

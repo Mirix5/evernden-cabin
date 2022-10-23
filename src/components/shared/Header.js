@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import "./../../css/Header.css";
+import "./../../css/header.css";
 import { News } from '../News';
 import { Photos } from '../Photos';
-import { CabinCalendar } from '../CabinCalendar';
+import { Calendar } from '../Calendar';
 import { Documents } from '../Documents';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -52,20 +52,12 @@ export class Header extends Component {
             </li>
           </ul>
 
-          <Switch>
-            <Route path="/news">
-              <News visibility={this.state.contentVisible}/>
-            </Route>
-            <Route path="/photos">
-              <Photos visibility={this.state.contentVisible}/>
-            </Route>
-            <Route path="/calendar">
-              <CabinCalendar visibility={this.state.contentVisible}/>
-            </Route>
-            <Route path="/documents">
-              <Documents visibility={this.state.contentVisible}/>
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/news" element={<News visibility={this.state.contentVisible}/>} />
+            <Route path="/photos" element={<Photos visibility={this.state.contentVisible}/>} />
+            <Route path="/calendar" element={<Calendar visibility={this.state.contentVisible}/>} />
+            <Route path="/documents" element={<Documents visibility={this.state.contentVisible}/>}/>
+          </Routes>
         </Router>
       </div>
     );

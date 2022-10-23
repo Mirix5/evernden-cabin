@@ -1,63 +1,63 @@
 .Header {
-  background-color:rgba(0, 0, 0, 0);
-  color: white;
-  width: 100vw;
-  max-height: 15vh;
-  transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
-  position: absolute;
-  font-family: 'Sacramento', serif;
-  font-size: 2em;
-  font-weight: 100px;
-}
-
-a {
-  color: white;
-}
-
-.logo {
-  display: inline-block;
-  margin-bottom: 0px;
-  cursor: pointer;
-}
-
-.navigation-list {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0px;
-}
-
-.navigation-list li {
-  display: inline-block;
-  padding: 0px 25px;
-  cursor: pointer;
-  transition: color 0.2s;
-  font-family: 'Caveat', cursive;
-}
-
-.navigation-list li:hover {
-  color: lightgrey;
-}
-
-.underline {
-  border-bottom: 3px solid currentColor;
-  display: inline-block;
-  line-height: 0.5;
-}
-
-.top {
-  top: 2%;
-}
-
-.middle {
-  top: 40%;
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
+    background-color:rgba(0, 0, 0, 0);
+    color: white;
+    width: 100vw;
+    max-height: 15vh;
+    transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position: absolute;
+    font-family: 'Sacramento', serif;
+    font-size: 2em;
+    font-weight: 100px;
+  }
+  
+  a {
+    color: white;
+  }
+  
+  .logo {
+    display: inline-block;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+  
+  .navigation-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  
+  .navigation-list li {
+    display: inline-block;
+    padding: 0px 25px;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: 'Caveat', cursive;
+  }
+  
+  .navigation-list li:hover {
+    color: lightgrey;
+  }
+  
+  .underline {
+    border-bottom: 3px solid currentColor;
+    display: inline-block;
+    line-height: 0.5;
+  }
+  
+  .top {
+    top: 2%;
+  }
+  
+  .middle {
+    top: 40%;
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
