@@ -22,7 +22,7 @@
   
   .navigation-list {
     list-style: none;
-    margin: 0 auto;
+    margin: -.2em;
     padding: 0px;
   }
   
@@ -60,4 +60,8 @@
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
+  }
+
+  .li-selected {
+    background-color: #175947;
   }

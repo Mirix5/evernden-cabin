@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import "./../../css/header.css";
 import { News } from '../News';
 import { Photos } from '../Photos';
-import { Calendar } from '../Calendar';
+import { CabinCalendar } from '../CabinCalendar';
 import { Documents } from '../Documents';
 import {
   BrowserRouter as Router,
@@ -55,7 +55,7 @@ export class Header extends Component {
           <Routes>
             <Route path="/news" element={<News visibility={this.state.contentVisible}/>} />
             <Route path="/photos" element={<Photos visibility={this.state.contentVisible}/>} />
-            <Route path="/calendar" element={<Calendar visibility={this.state.contentVisible}/>} />
+            <Route path="/calendar" element={<CabinCalendar visibility={this.state.contentVisible}/>} />
             <Route path="/documents" element={<Documents visibility={this.state.contentVisible}/>}/>
           </Routes>
         </Router>
