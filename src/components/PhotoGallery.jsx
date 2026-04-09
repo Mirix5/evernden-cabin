@@ -25,8 +25,6 @@ export default function PhotoGallery(props) {
           data-pswp-width={image.width}
           data-pswp-height={image.height}
           key={props.galleryID + '-' + index}
-          target="_blank"
-          rel="noreferrer"
         >
           <img src={image.thumbnailURL} alt="" />
         </a>

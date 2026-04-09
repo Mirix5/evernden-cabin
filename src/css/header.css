@@ -7,7 +7,7 @@
   z-index: 100;
   transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
   font-family: 'Sacramento', serif;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 100;
 }
 
@@ -19,15 +19,17 @@
 .logo {
   margin: 0;
   cursor: pointer;
+  font-size: 2.2em;
 }
 
 .navigation-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1.5em;
+  gap: 1.2em;
   margin: 0;
   padding: 0;
+  font-size: 0.85em;
 }
 
 .navigation-list li {
@@ -37,7 +39,7 @@
 }
 
 .navigation-list li:hover {
-  color: rgba(255, 255, 255, 0.65);
+  color: #e8c070;
 }
 
 .underline {
@@ -51,7 +53,7 @@
 }
 
 .middle {
-  top: 40%;
+  top: 33%;
 }
 
 .noselect {
