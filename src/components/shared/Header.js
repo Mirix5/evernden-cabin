@@ -35,7 +35,7 @@ export class Header extends Component {
       <div className={"Header noselect "+position} >
         <Router>
           <Link to="/"
-            ><h1 className='logo underline' onClick={this.repositionMiddle.bind(this)}> The Evernden Cabin </h1>
+            ><h1 className='logo' onClick={this.repositionMiddle.bind(this)}> The Evernden Cabin </h1>
           </Link>
           <ul className='navigation-list' >
             <li onClick={this.repositionTop.bind(this)}>

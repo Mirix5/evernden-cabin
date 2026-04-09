@@ -1,36 +1,19 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  background-color: white;
 }
 
 .App {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  background-color:black;
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
-.background-overlay {
-  background-color: rgba(1,1,1,0.3);
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  overflow: hidden;
-}
+
 
 .background-image {
-  height: 100%;
-  top: 0;
-  left: 0;
+  width: 90%;
   z-index: -100;
-}
-
-.background-img-wrapper {
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
 }
