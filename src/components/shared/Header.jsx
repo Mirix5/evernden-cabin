@@ -24,7 +24,7 @@ function HeaderContent() {
 
   return (
     <div className={"Header noselect " + position}>
-      <h1 className='logo' onClick={goHome}> The Evernden Cabin test</h1>
+      <h1 className='logo' onClick={goHome}> The Evernden Cabin </h1>
       <ul className='navigation-list'>
         <li onClick={() => openPage('news')}>news</li>
         <li onClick={() => openPage('photos')}>photos</li>
