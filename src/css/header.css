@@ -1,60 +1,68 @@
 .Header {
-    text-shadow: 3px 3px 3px rgb(0, 0, 0);
-    color: black;
-    width: 100vw;
-    transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
-    font-family: 'Sacramento', serif;
-    font-size: 2em;
-    font-weight: 100px;
-  }
-  
-  a {
-    color: black;
-  }
-  
-  .logo {
-    margin-bottom: 0px;
-    cursor: pointer;
-  }
-  
-  .navigation-list {
-    padding: 0px;
-  }
-  
-  .navigation-list li {
-    cursor: pointer;
-    transition: color 0.2s;
-    font-family: 'Caveat', cursive;
-  }
-  
-  .navigation-list li:hover {
-    color: lightgrey;
-  }
-  
-  .underline {
-    border-bottom: 3px solid currentColor;
-    display: inline-block;
-    line-height: 0.5;
-  }
-  
-  .top {
-    top: 2%;
-  }
-  
-  .middle {
-    top: 40%;
-  }
-  
-  .noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
-  }
+  position: fixed;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  z-index: 100;
+  transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+  font-family: 'Sacramento', serif;
+  font-size: 2em;
+  font-weight: 100;
+}
 
-  .li-selected {
-    background-color: #175947;
-  }
+.Header a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  cursor: pointer;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-list li {
+  cursor: pointer;
+  transition: color 0.2s;
+  font-family: 'Caveat', cursive;
+}
+
+.navigation-list li:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.underline {
+  border-bottom: 3px solid currentColor;
+  display: inline-block;
+  line-height: 0.5;
+}
+
+.top {
+  top: 2%;
+}
+
+.middle {
+  top: 40%;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.li-selected {
+  background-color: #175947;
+}
