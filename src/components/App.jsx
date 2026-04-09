@@ -5,8 +5,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="background-img-wrapper">
-        <img className='background-image' src="/images/kitchen.jpg" alt="Cabin kitchen" />
+      <div className="background-video-wrapper">
+        <video
+          className="background-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/media/final2.webm" type="video/webm" />
+        </video>
+        <div className="background-overlay" />
       </div>
     </div>
   );
