@@ -13,7 +13,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.7.0",
     "sass": "latest",
-    "vite": "^5.4.21"
+    "vite": "^8.0.8"
   },
   "scripts": {
     "start": "node .",
