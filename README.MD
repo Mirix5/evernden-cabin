@@ -1,1 +1,0 @@
-React based application for everything related to the Evernden family cabin. 
