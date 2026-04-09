@@ -24,6 +24,21 @@
     transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+@media (max-width: 600px) {
+  .Photos {
+    height: 88vh;
+    font-size: 18px;
+  }
+
+  .visible {
+    top: 12vh;
+  }
+
+  .pswp-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
 .pswp-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

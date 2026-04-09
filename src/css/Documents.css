@@ -34,3 +34,18 @@
     color: yellow;
     padding-left: 16px;
 }
+
+@media (max-width: 600px) {
+  .Documents {
+    height: 88vh;
+    font-size: 18px;
+  }
+
+  .visible {
+    top: 12vh;
+  }
+
+  .documents-list {
+    padding: 0 5%;
+  }
+}
