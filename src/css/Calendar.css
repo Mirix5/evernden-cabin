@@ -54,3 +54,22 @@
 .react-calendar__month-view__days__day {
     height: 10vh;
 }
+
+@media (max-width: 600px) {
+  .Calendar {
+    height: 88vh;
+    font-size: 18px;
+  }
+
+  .visible {
+    top: 12vh;
+  }
+
+  .react-calendar__month-view__days__day {
+    height: 7vh;
+  }
+
+  .calendar-wrapper {
+    width: 96%;
+  }
+}
