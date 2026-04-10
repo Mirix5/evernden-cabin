@@ -13,7 +13,7 @@ function App() {
           muted
           playsInline
         >
-          <source src="/media/final2.webm" type="video/webm" />
+          <source src="/media/slideshow.webm" type="video/webm" />
         </video>
         <div className="background-overlay" />
       </div>
