@@ -6,7 +6,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 22px;
     width: 100vw;
-    height: 85vh;
+    height: calc(100vh - var(--content-top, 29vh));
     overflow-y: auto;
     border-radius: 8px 8px 0 0;
     padding-top: 1em;
@@ -19,7 +19,7 @@
 }
 
 .visible {
-    top: 29vh;
+    top: var(--content-top, 29vh);
     transition: top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -57,12 +57,7 @@
 
 @media (max-width: 600px) {
   .Calendar {
-    height: 88vh;
     font-size: 18px;
-  }
-
-  .visible {
-    top: 12vh;
   }
 
   .react-calendar__month-view__days__day {
