@@ -3,7 +3,7 @@
     background-color: #175947;
     position: fixed;
     z-index: 50;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 22px;
     width: 100vw;
     height: calc(100vh - var(--content-top, 29vh));
